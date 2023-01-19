@@ -1,10 +1,8 @@
 import React from "react";
-
 import { getMealByID } from "../../../utils/fetch";
 import MealDetails from "../../../components/meal-details/meal-details";
 
 export default function DetailsPage({ mealById }) {
-	console.log("reload...");
 	return <MealDetails meal={mealById} />;
 }
 

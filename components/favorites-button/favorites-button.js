@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { useSession } from "next-auth/react";
 import styles from "./favorites-button.module.css";
 
 const FavoritesButton = ({ meal }) => {
+	const { data: session, status } = useSession();
 	const [button, setButton] = useState(false);
 
 	const onClickHandler = (paramMeal) => {
@@ -14,13 +16,14 @@ const FavoritesButton = ({ meal }) => {
 			strCategory: paramMeal.strCategory,
 			strCategory: paramMeal.strCategory,
 			strMealThumb: paramMeal.strMealThumb,
+			user: session.user.email,
 		};
 		const options = {
 			method: "POST",
 			headers: { "Application-Type": "application/json" },
 			body: JSON.stringify(meal),
 		};
-		fetch("/api/favorites", options)
+		fetch("/api/favorites/favorites", options)
 			.then((res) => res.json())
 			.then((result) => {
 				if (result.inserted) {
@@ -36,7 +39,7 @@ const FavoritesButton = ({ meal }) => {
 			method: "GET",
 			headers: { "Application-Type": "application/json" },
 		};
-		fetch(`/api/favorites/${meal.idMeal}`, options)
+		fetch(`/api/favorites/favorites/${meal.idMeal}`, options)
 			.then((res) => res.json())
 			.then((result) => {
 				if (result.present) {

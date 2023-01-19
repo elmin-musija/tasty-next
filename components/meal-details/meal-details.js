@@ -1,10 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import { uid } from "uid";
+import { useSession } from "next-auth/react";
 import FavoritesButton from "../../components/favorites-button/favorites-button";
 import { getIngredients, getMeasures } from "../../utils/data";
 
 const MealDetails = (props) => {
+	const { data: session, status } = useSession();
 	const { meal } = props;
 	const ingredients = getIngredients(meal);
 	const measures = getMeasures(meal);
@@ -25,7 +27,7 @@ const MealDetails = (props) => {
 			<a href={meal?.strYoutube} target="_blank">
 				Link to Youtube
 			</a>
-			<FavoritesButton meal={meal} />
+			{session && status === "authenticated" && <FavoritesButton meal={meal} />}
 			<p key={uid()}>Ingredients</p>
 			{ingredients.map((element) => (
 				<p key={uid()}>{element}</p>

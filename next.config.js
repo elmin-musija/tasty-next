@@ -8,9 +8,6 @@ module.exports = {
 };
 
 module.exports = {
-	// experimental: {
-	// 	appDir: true,
-	// },
 	images: {
 		remotePatterns: [
 			{
