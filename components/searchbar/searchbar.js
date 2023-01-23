@@ -2,6 +2,7 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import { useRef } from "react";
 import { uid } from "uid";
+import styles from "./searchbar.module.css";
 
 const Searchbar = () => {
 	const inputRef = useRef();
@@ -13,8 +14,17 @@ const Searchbar = () => {
 		inputRef.current.value = "";
 	};
 
+	const focusHandler = () => {
+		inputRef.current.focus();
+	};
+
 	return (
-		<div key={uid()}>
+		<div key={uid()} className={styles.searchbar} onClick={focusHandler}>
+			<img
+				src="/search.svg"
+				alt="Search Bar Icon"
+				className={styles.searchIcon}
+			/>
 			<form onSubmit={onSubmitHandler}>
 				<input
 					type="text"
@@ -24,7 +34,7 @@ const Searchbar = () => {
 					required
 					placeholder="search for meal"
 				/>
-				<input type="submit" value="Search" />
+				{/* <input type="submit" value="Search" /> */}
 			</form>
 		</div>
 	);
