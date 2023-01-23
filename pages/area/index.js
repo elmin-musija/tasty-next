@@ -1,8 +1,14 @@
 import { getAllAreas } from "../../utils/fetch";
 import AllAreas from "../../components/all-areas/all-areas";
+import Searchbar from "../../components/searchbar/searchbar";
 
 function index({ allAreas }) {
-	return <AllAreas allAreas={allAreas} />;
+	return (
+		<>
+			<Searchbar />
+			<AllAreas allAreas={allAreas} />
+		</>
+	);
 }
 
 export default index;

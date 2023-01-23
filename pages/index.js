@@ -1,4 +1,5 @@
 import { getRandomMeal, getAllAreas, getAllCategories } from "../utils/fetch";
+import Searchbar from "../components/searchbar/searchbar";
 import MealOfTheDay from "../components/meal-of-the-day/meal-of-the-day";
 import PreviewAreas from "../components/preview-areas/preview-areas";
 import PreviewCategories from "../components/preview-categories/preview-categories";
@@ -10,6 +11,7 @@ export default function Home({
 }) {
 	return (
 		<div>
+			<Searchbar />
 			<section>
 				<MealOfTheDay randomMeal={mealOfTheDay} />
 			</section>

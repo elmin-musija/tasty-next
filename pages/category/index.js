@@ -1,9 +1,15 @@
 import React from "react";
 import AllCategories from "../../components/all-categories/all-categories";
+import Searchbar from "../../components/searchbar/searchbar";
 import { getAllCategories } from "../../utils/fetch";
 
 function CategoryPage({ allCategories }) {
-	return <AllCategories allCategories={allCategories} showThumbnail={true} />;
+	return (
+		<>
+			<Searchbar />
+			<AllCategories allCategories={allCategories} showThumbnail={true} />
+		</>
+	);
 }
 
 export default CategoryPage;

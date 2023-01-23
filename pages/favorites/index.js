@@ -2,10 +2,16 @@ import React from "react";
 import { unstable_getServerSession } from "next-auth/next";
 import { NextAuthOptions } from "../../pages/api/auth/[...nextauth]";
 import { dbGetAllFavoritesByUser } from "../../src/db_access/favorites-DAO";
+import Searchbar from "../../components/searchbar/searchbar";
 import MealGallery from "../../components/meal-gallery/meal-gallery";
 
 const FavoritesPage = ({ allFavorites }) => {
-	return <MealGallery category={"Favorites"} meals={allFavorites} />;
+	return (
+		<>
+			<Searchbar />
+			<MealGallery category={"Favorites"} meals={allFavorites} />
+		</>
+	);
 };
 
 export default FavoritesPage;

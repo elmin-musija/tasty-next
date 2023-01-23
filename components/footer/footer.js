@@ -9,6 +9,11 @@ const Footer = () => {
 			<Link href="/">Home</Link>
 			<Link href="/search">Search</Link>
 			<Link href="/favorites">Favorites</Link>
+			{/* Prüfen, ob eingeloggt: dementsprechend Pofile-Icon anzeigen */}
+			{/* <Link href="/profile">
+				{session && status === "authenticated" && SVG_farbig}
+			</Link>
+			<Link href="/profile">{!session && SVG_ausgegraut}</Link> */}
 		</div>
 	);
 };
