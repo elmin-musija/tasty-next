@@ -1,0 +1,33 @@
+.searchbar {
+	width: 100%;
+	height: 4.5rem;
+	border: 1px solid #e6ebf2;
+	outline: 2px solid #70b9be00;
+	border-radius: 1rem;
+	display: flex;
+	align-items: center;
+	transition: all 0.2s;
+	margin: 2rem 0;
+}
+
+.searchIcon {
+	padding: 1rem;
+}
+
+.searchbar input {
+	width: 280px;
+	border-radius: 2rem;
+	height: 100%;
+	font-size: 1.6rem;
+	border: none;
+	padding: 1rem;
+}
+
+.searchbar input:focus {
+	outline: none;
+}
+
+.searchbar:focus-within {
+	outline: 2px solid #70b9be;
+	border: 1px solid #e6ebf200;
+}
