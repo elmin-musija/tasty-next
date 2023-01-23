@@ -24,6 +24,14 @@ const LoginForm = (props) => {
 		await signIn("github", { callbackUrl: "/favorites" });
 	};
 
+	const onGoogleLoginHandler = async () => {
+		await signIn("google", { callbackUrl: "/favorites" });
+	};
+
+	const onDiscordLoginHandler = async () => {
+		await signIn("discord", { callbackUrl: "/favorites" });
+	};
+
 	return (
 		<div>
 			<h1>Login</h1>
@@ -52,6 +60,8 @@ const LoginForm = (props) => {
 				/>
 			</form>
 			<button onClick={onGitHubLoginHandler}>Login with Github</button>
+			<button onClick={onGoogleLoginHandler}>Login with Google</button>
+			<button onClick={onDiscordLoginHandler}>Login with Discord</button>
 		</div>
 	);
 };
