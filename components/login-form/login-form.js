@@ -20,6 +20,10 @@ const LoginForm = (props) => {
 		inputPasswordRef.current.value = "";
 	};
 
+	const onGitHubLoginHandler = async () => {
+		await signIn("github", { callbackUrl: "/favorites" });
+	};
+
 	return (
 		<div>
 			<h1>Login</h1>
@@ -47,6 +51,7 @@ const LoginForm = (props) => {
 					value="No Account? Sign up now!"
 				/>
 			</form>
+			<button onClick={onGitHubLoginHandler}>Login with Github</button>
 		</div>
 	);
 };

@@ -1,5 +1,6 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+import GithubProvider from "next-auth/providers/github";
 import { dbGetSingleUser } from "../../../src/db_access/users-DAO";
 import { verifyPassword } from "../../../utils/crypt";
 
@@ -13,6 +14,10 @@ export const NextAuthOptions = {
 		maxAge: 60 * 5,
 	},
 	providers: [
+		GithubProvider({
+			clientId: process.env.GITHUB_ID,
+			clientSecret: process.env.GITHUB_SECRET,
+		}),
 		CredentialsProvider({
 			type: "credentials",
 			credentials: {},
