@@ -39,7 +39,7 @@ const Footer = () => {
 				)}
 			</Link>
 
-			{session && status === "authenticated" && (
+			{session && status === "authenticated" && url !== "/profile" && (
 				<Link href="/profile">
 					<img src="/profile.svg" alt="profile" className={styles.icon} />
 				</Link>

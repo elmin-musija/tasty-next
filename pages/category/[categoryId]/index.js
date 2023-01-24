@@ -1,16 +1,10 @@
 import React from "react";
 import { getAllCategories, getAllMealsByCategory } from "../../../utils/fetch";
 import MealGallery from "../../../components/meal-gallery/meal-gallery";
-import Searchbar from "../../../components/searchbar/searchbar";
 
 export default function CategoryPage(props) {
 	const { categoryId, mealsByCategory } = props;
-	return (
-		<>
-			<Searchbar />
-			<MealGallery category={categoryId} meals={mealsByCategory} />
-		</>
-	);
+	return <MealGallery category={categoryId} meals={mealsByCategory} />;
 }
 
 export async function getStaticProps(context) {
