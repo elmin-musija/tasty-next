@@ -10,6 +10,10 @@ function Header() {
 	const { data: session, status } = useSession();
 	const router = useRouter();
 
+	if (router.pathname === "/" || router.pathname === "/onboarding") {
+		return;
+	}
+
 	return (
 		<>
 			<div className={styles.header}>
