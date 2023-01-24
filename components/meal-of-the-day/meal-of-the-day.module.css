@@ -1,0 +1,50 @@
+.mealOfDayItem {
+	width: 26.5rem;
+	height: 17.5rem;
+	background-color: #70b9be;
+	border-radius: 16px;
+	background-image: url("../../public/meal-of-the-day.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 1.5rem;
+	margin-bottom: 3rem;
+}
+
+.mealOfDayItem a {
+	display: flex;
+	align-items: flex-end;
+	height: 100%;
+}
+
+.mealOfDayItem a > div {
+	width: 100%;
+}
+
+.mealHeading {
+	font-size: 1.8rem;
+	color: #fff;
+	font-weight: bold;
+	width: 70%;
+	margin-bottom: 1rem;
+}
+
+.mealDetailsContainer {
+	display: flex;
+	justify-content: space-between;
+	color: #fff;
+}
+
+.categoryContainer {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+}
+
+.circle {
+	display: block;
+	width: 16px;
+	height: 16px;
+	background-color: #c4c4c4;
+	border: 1px solid white;
+	border-radius: 100%;
+}
