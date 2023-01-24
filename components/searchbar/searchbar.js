@@ -21,7 +21,7 @@ const Searchbar = () => {
 	return (
 		<div key={uid()} className={styles.searchbar} onClick={focusHandler}>
 			<img
-				src="/search.svg"
+				src="/searchbar-icon.svg"
 				alt="Search Bar Icon"
 				className={styles.searchIcon}
 			/>

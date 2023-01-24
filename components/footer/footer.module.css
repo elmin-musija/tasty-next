@@ -1,0 +1,15 @@
+.footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	gap: 6.5rem;
+
+	padding: 2rem;
+	border-radius: 2rem 2rem 0 0;
+	background-color: white;
+	box-shadow: 0 0 12px rgb(223, 222, 222);
+}
