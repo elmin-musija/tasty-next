@@ -17,7 +17,9 @@ export default function App({
 				<div className={styles.phone}>
 					<div className={styles.content}>
 						<Header />
-						<Component {...pageProps} />
+						<div className={styles.page}>
+							<Component {...pageProps} />
+						</div>
 						<Footer />
 					</div>
 				</div>
