@@ -8,7 +8,6 @@ const Footer = () => {
 	const { data: session, status } = useSession();
 	const router = useRouter();
 	const url = router.pathname;
-	console.log(url);
 
 	return (
 		<div className={styles.footer}>
