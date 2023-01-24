@@ -1,0 +1,33 @@
+.areasHeading {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.areasItem {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.areasItem a {
+	background-color: #f1f5f5;
+	display: block;
+	width: 10rem;
+	height: 4rem;
+	border-radius: 10rem;
+	font-size: 1.6rem;
+	color: #0a2533;
+	font-weight: 400;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	transition: all 0.2s;
+}
+
+.areasItem a:hover {
+	background-color: #70b9be;
+	color: #fff;
+}
