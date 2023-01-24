@@ -30,7 +30,7 @@ export async function getStaticProps() {
 	const allAreas = await getAllAreas();
 	const previewAreas = allAreas.slice(0, 3);
 	const allCategories = await getAllCategories();
-	const previewCategories = allCategories.slice(0, 3);
+	const previewCategories = allCategories.slice(0, 5);
 
 	return {
 		props: {

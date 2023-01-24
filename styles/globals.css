@@ -35,6 +35,12 @@ h2 {
 	margin-bottom: 1.2rem;
 }
 
+.previewHeading {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 .seeAllLink {
 	font-size: 1.4rem;
 	font-weight: bold;
