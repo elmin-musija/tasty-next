@@ -1,5 +1,6 @@
 :root {
 	--phonePadding: 1.5rem;
+	--gapGrid: 1rem;
 }
 
 * {

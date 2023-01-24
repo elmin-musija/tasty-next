@@ -1,0 +1,23 @@
+.mealGallery {
+	padding: 0 var(--phonePadding);
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--gapGrid);
+	margin-bottom: 3rem;
+}
+
+.mealItem {
+	padding: 0.7rem;
+	border-radius: 1rem;
+	box-shadow: 0 0 1rem rgb(222, 222, 222);
+	margin-bottom: var(--gapGrid);
+}
+
+.mealItem img {
+	border-radius: 1rem;
+	width: 100%;
+	height: auto;
+}
