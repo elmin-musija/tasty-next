@@ -24,8 +24,8 @@ const PreviewCategories = ({ previewCategories }) => {
 							<Image
 								src={element.strCategoryThumb}
 								alt={element.strCategory}
-								width={100}
-								height={100}
+								width={70}
+								height={70}
 								priority
 								className={styles.catImg}
 							/>
