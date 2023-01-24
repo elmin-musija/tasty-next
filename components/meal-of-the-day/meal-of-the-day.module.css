@@ -7,18 +7,25 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding: 1.5rem;
-	margin-bottom: 3rem;
 }
 
 .mealOfDayItem a {
 	display: flex;
-	align-items: flex-end;
+	flex-direction: column;
+	justify-content: flex-end;
 	height: 100%;
 }
 
 .mealOfDayItem a > div {
 	width: 100%;
 }
+
+/* .mealOfDayItem img {
+	width: 5rem;
+	height: 5rem;
+	margin-bottom: 1rem;
+	border-radius: 1rem;
+} */
 
 .mealHeading {
 	font-size: 1.8rem;
