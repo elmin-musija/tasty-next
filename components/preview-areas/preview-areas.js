@@ -5,8 +5,8 @@ import styles from "./preview-areas.module.css";
 
 const PreviewAreas = ({ previewAreas }) => {
 	return (
-		<div key={uid()}>
-			<div className="previewHeading">
+		<div key={uid()} className={styles.areaPreview}>
+			<div className={styles.areaHeading}>
 				<h2>Areas</h2>
 				<Link href="/area" className="seeAllLink">
 					See all

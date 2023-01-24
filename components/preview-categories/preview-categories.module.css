@@ -2,6 +2,13 @@
 	width: 100%;
 }
 
+.catHeading {
+	padding: 0 var(--phonePadding);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 .catItemContainer {
 	overflow-x: scroll;
 	display: flex;

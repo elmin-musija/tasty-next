@@ -7,7 +7,7 @@ import styles from "./preview-categories.module.css";
 const PreviewCategories = ({ previewCategories }) => {
 	return (
 		<div key={uid()}>
-			<div className="previewHeading">
+			<div className={styles.catHeading}>
 				<h2>Categories</h2>
 				<Link href={"/category"} className="seeAllLink">
 					See all

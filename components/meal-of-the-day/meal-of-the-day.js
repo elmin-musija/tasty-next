@@ -6,7 +6,7 @@ import styles from "./meal-of-the-day.module.css";
 
 const MealOfTheDay = ({ randomMeal }) => {
 	return (
-		<div>
+		<div className={styles.mealOfDay}>
 			<h2>Meal of the Day</h2>
 			<div key={uid()} className={styles.mealOfDayItem}>
 				<Link href={`/details/${randomMeal.idMeal}`}>

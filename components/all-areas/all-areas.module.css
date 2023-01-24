@@ -1,36 +1,29 @@
-.areaPreview {
+.allAreas {
 	padding: 0 var(--phonePadding);
 }
 
-.areaHeading {
+.areaList {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	flex-wrap: wrap;
 }
 
-.areasItem {
-	display: flex;
-	align-items: center;
-	gap: 1rem;
-}
-
-.areasItem a {
+.areaList a {
 	background-color: #f1f5f5;
 	display: block;
-	width: 10rem;
+	width: fit-content;
+	padding: 0 1.4rem;
+	margin: 0.5rem;
 	height: 3.5rem;
 	border-radius: 10rem;
 	font-size: 1.6rem;
 	color: #0a2533;
+	transition: all 0.2s;
 
 	display: flex;
 	align-items: center;
-	justify-content: center;
-
-	transition: all 0.2s;
 }
 
-.areasItem a:hover {
+.areaList a:hover {
 	background-color: #70b9be;
 	color: #fff;
 }

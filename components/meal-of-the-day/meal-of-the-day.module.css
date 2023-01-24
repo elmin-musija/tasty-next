@@ -1,3 +1,7 @@
+.mealOfDay {
+	padding: 0 var(--phonePadding);
+}
+
 .mealOfDayItem {
 	width: 26.5rem;
 	height: 17.5rem;
