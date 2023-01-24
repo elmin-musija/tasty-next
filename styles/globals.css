@@ -20,6 +20,10 @@ html {
 		sans-serif;
 }
 
+section {
+	margin-bottom: 3rem;
+}
+
 a {
 	color: inherit;
 	font-size: inherit;
