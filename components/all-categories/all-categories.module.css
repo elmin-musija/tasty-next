@@ -1,3 +1,56 @@
 .allCategories {
 	padding: 0 var(--phonePadding);
+	margin-bottom: 2rem;
+}
+
+.catList {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.catListWithoutTN {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.catItem {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	width: fit-content;
+	border-radius: 1rem;
+	background-color: #f1f5f5;
+	padding: 1.4rem;
+
+	transition: all 0.2s;
+}
+
+.catItem:hover,
+.catItemWithoutTN:hover {
+	background-color: #70b9be;
+	color: #fff;
+}
+
+.catImg {
+	height: 4rem;
+	width: auto;
+}
+
+.catItemWithoutTN {
+	background-color: #f1f5f5;
+	display: block;
+	width: fit-content;
+	padding: 0 1.4rem;
+	margin: 0.5rem;
+	height: 3.5rem;
+	border-radius: 10rem;
+	font-size: 1.6rem;
+	color: #0a2533;
+	transition: all 0.2s;
+
+	display: flex;
+	align-items: center;
 }

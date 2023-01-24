@@ -1,5 +1,6 @@
 .allAreas {
 	padding: 0 var(--phonePadding);
+	margin-bottom: 2rem;
 }
 
 .areaList {
