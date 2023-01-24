@@ -19,7 +19,9 @@ const MealGallery = ({ category, meals }) => {
 								height={100}
 								priority
 							/>
-							<p>{element.strMeal}</p>
+							<div className={styles.mealNameContainer}>
+								<p>{element.strMeal}</p>
+							</div>
 						</Link>
 					</div>
 				))}

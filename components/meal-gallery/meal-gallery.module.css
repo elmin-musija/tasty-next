@@ -4,8 +4,8 @@
 
 .grid {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: var(--gapGrid);
+	grid-template-columns: repeat(3, 31%);
+	gap: 1rem;
 	margin-bottom: 3rem;
 }
 
@@ -13,11 +13,15 @@
 	padding: 0.7rem;
 	border-radius: 1rem;
 	box-shadow: 0 0 1rem rgb(222, 222, 222);
-	margin-bottom: var(--gapGrid);
+	overflow: hidden;
 }
 
 .mealItem img {
-	border-radius: 1rem;
+	border-radius: 0.7rem;
 	width: 100%;
 	height: auto;
+}
+
+.mealNameContainer {
+	height: 6.1rem;
 }
