@@ -15,7 +15,7 @@ const Footer = () => {
 	return (
 		<div className={styles.footer}>
 			<Link href="/home">
-				{router.pathname === "/" ? (
+				{router.pathname === "/home" ? (
 					<img src="/home-colored.svg" alt="home" className={styles.icon} />
 				) : (
 					<img src="/home.svg" alt="home" className={styles.icon} />
