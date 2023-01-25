@@ -1,12 +1,10 @@
 import { getAllAreas, getAllCategories } from "../../utils/fetch";
-import Searchbar from "../../components/searchbar/searchbar";
 import AllAreas from "../../components/all-areas/all-areas";
 import AllCategories from "../../components/all-categories/all-categories";
 
 function SearchPage({ allAreas, allCategories }) {
 	return (
 		<div>
-			<Searchbar />
 			<AllAreas allAreas={allAreas} />
 			<AllCategories allCategories={allCategories} />
 		</div>

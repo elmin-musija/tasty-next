@@ -1,9 +1,12 @@
 import React from "react";
 import { signOut } from "next-auth/react";
+import { useRouter } from "next/router";
 
 function LogoutButton() {
+	const router = useRouter();
 	const onLogoutHandler = async () => {
-		await signOut({ redirect: "/" });
+		const redirect = await signOut({ redirect: false, callbackUrl: "/home" });
+		router.push(redirect.url);
 	};
 
 	return <button onClick={onLogoutHandler}>Logout</button>;
