@@ -26,7 +26,22 @@ const getMeasures = (paramMeal) => {
 	return measures;
 };
 
+const getIngredientsMeasures = (paramMeal) => {
+	const ingredients = getIngredients(paramMeal);
+	const measures = getMeasures(paramMeal);
+	const length = Math.min(ingredients.length, measures.length);
+	let ingredientsMeasures = [];
+	for (let i = 0; i < length; i++) {
+		ingredientsMeasures.push({
+			ingredient: ingredients[i],
+			measure: measures[i],
+		});
+	}
+	return ingredientsMeasures;
+};
+
 module.exports = {
 	getIngredients,
 	getMeasures,
+	getIngredientsMeasures,
 };
