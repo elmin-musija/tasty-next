@@ -18,8 +18,8 @@ export default function App({
 						<div className={styles.page}>
 							<Component {...pageProps} />
 						</div>
-						<Footer />
 					</div>
+					<Footer />
 				</div>
 				<Link href="/" className={styles.homeBtn}></Link>
 			</div>
