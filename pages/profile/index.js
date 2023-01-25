@@ -2,15 +2,24 @@ import React from "react";
 import { unstable_getServerSession } from "next-auth";
 import { NextAuthOptions } from "../api/auth/[...nextauth]";
 import Image from "next/image";
+import Link from "next/link";
 import { uid } from "uid";
+import { dbGetAllFavoriteCategoriesByUser } from "../../src/db_access/favorites-DAO";
 
-const ProfilePage = ({ name, email, image }) => {
+const ProfilePage = ({ name, email, image, favoriteCategories }) => {
 	return (
 		<div>
 			<h1>Your Profile</h1>
 			{image && <Image src={image} width={150} height={150} alt={name} />}
 			<p key={uid()}>{name}</p>
 			<h2 key={uid()}>Your Interests</h2>
+			<div>
+				{favoriteCategories?.map((category) => (
+					<Link href={`/category/${category}`} key={uid()}>
+						{category}
+					</Link>
+				))}
+			</div>
 			<h2 key={uid()}>Your Account</h2>
 			<p key={uid()}>{email}</p>
 			<h2 key={uid()}>Upgrade to Premium</h2>
@@ -37,6 +46,11 @@ export async function getServerSideProps(context) {
 	if (!session) {
 		return { redirect: { destination: "/auth/login", permanent: false } };
 	}
+
 	const { name, email, image } = session.user;
-	return { props: { name, email, image } };
+	/**
+	 * get all categories of favorite meals by user
+	 */
+	const favoriteCategories = await dbGetAllFavoriteCategoriesByUser(email);
+	return { props: { name, email, image, favoriteCategories } };
 }

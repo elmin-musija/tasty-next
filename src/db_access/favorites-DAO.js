@@ -26,6 +26,20 @@ const dbGetAllFavoritesByUser = async (paramUserEmail) => {
 	return resultFormat;
 };
 
+const dbGetAllFavoriteCategoriesByUser = async (paramUserEmail) => {
+	const connection = await dbConnect();
+	const result = await connection
+		.collection(COLLECTION_NAME)
+		.find({ user: paramUserEmail })
+		.toArray();
+	const filteredResult = result.map((element) => element.strCategory);
+	const uniqueFilteredResults = Array.from(new Set(filteredResult));
+	const uniqueFilteredResultsSorted = uniqueFilteredResults.sort((a, b) =>
+		a.localeCompare(b)
+	);
+	return uniqueFilteredResultsSorted;
+};
+
 const dbGetSingleFavorite = async (paramFavorite) => {
 	const connection = await dbConnect();
 	const result = await connection
@@ -72,6 +86,7 @@ module.exports = {
 	dbGetAllFavorites,
 	dbGetAllFavoritesByUser,
 	dbGetSingleFavorite,
+	dbGetAllFavoriteCategoriesByUser,
 	dbGetSingleFavoriteByUser,
 	dbDeleteSingleFavorite,
 	dbInsertSingleFavorite,
