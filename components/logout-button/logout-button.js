@@ -1,6 +1,7 @@
 import React from "react";
 import { signOut } from "next-auth/react";
 import { useRouter } from "next/router";
+import styles from "./logout-button.module.css";
 
 function LogoutButton() {
 	const router = useRouter();
@@ -9,7 +10,11 @@ function LogoutButton() {
 		router.push(redirect.url);
 	};
 
-	return <button onClick={onLogoutHandler}>Logout</button>;
+	return (
+		<button onClick={onLogoutHandler} className={styles.btn}>
+			Logout
+		</button>
+	);
 }
 
 export default LogoutButton;
