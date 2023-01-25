@@ -12,7 +12,9 @@ const ProfilePage = ({ name, email, image, favoriteCategories }) => {
 		<div className={styles.profile}>
 			<div>
 				{image && <Image src={image} width={150} height={150} alt={name} />}
-				<h3 key={uid()}>{name}</h3>
+				<p key={uid()} className={styles.profileName}>
+					{name}
+				</p>
 			</div>
 			<div>
 				<h2 key={uid()}>Your Interests</h2>

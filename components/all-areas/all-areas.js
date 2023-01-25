@@ -6,7 +6,7 @@ import styles from "./all-areas.module.css";
 const AllAreas = ({ allAreas }) => {
 	return (
 		<div key={uid()} className={styles.allAreas}>
-			<h3>Areas</h3>
+			<h2>Areas</h2>
 			<div className={styles.areaList}>
 				{allAreas.map((element) => (
 					<Link key={uid()} href={`area/${element.strArea}`}>

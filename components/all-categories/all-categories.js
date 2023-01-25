@@ -9,7 +9,7 @@ const AllCategories = ({ allCategories, showThumbnail }) => {
 
 	return (
 		<div key={uid()} className={styles.allCategories}>
-			<h3>Categories</h3>
+			<h2>Categories</h2>
 			<div className={showThumbnail ? styles.catList : styles.catListWithoutTN}>
 				{allCategories.map((element) => (
 					<Link

@@ -9,8 +9,9 @@
 	margin-bottom: 3rem;
 }
 
-.profile h3 {
-	font-size: 2.8rem;
+.profileName {
+	font-size: 2.6rem;
+	font-weight: 700;
 	width: 80%;
 	text-align: center;
 }

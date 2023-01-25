@@ -19,17 +19,17 @@ const MealDetails = (props) => {
 				height={250}
 				priority
 			/>
-			<h3 key={uid()}>{meal?.strCategory}</h3>
-			<h3 key={uid()}>{meal?.strArea}</h3>
+			<h2 key={uid()}>{meal?.strCategory}</h2>
+			<h2 key={uid()}>{meal?.strArea}</h2>
 			<p key={uid()}>{meal?.strInstructions}</p>
-			<h3 key={uid()}>{meal?.strTags}</h3>
+			<h2 key={uid()}>{meal?.strTags}</h2>
 			<a href={meal?.strYoutube} target="_blank">
 				Link to Youtube
 			</a>
 			{session && status === "authenticated" && <FavoritesButton meal={meal} />}
 
 			<div>
-				<h3 key={uid()}>Ingredients - Measures</h3>
+				<h2 key={uid()}>Ingredients - Measures</h2>
 				<IngredientMeasure meal={meal} />
 			</div>
 		</div>

@@ -7,7 +7,7 @@ import styles from "./meal-gallery.module.css";
 const MealGallery = ({ category, meals }) => {
 	return (
 		<div key={uid()} className={styles.mealGallery}>
-			<h3>{category}</h3>
+			<h2>{category}</h2>
 			<div className={styles.grid}>
 				{meals.map((element) => (
 					<div key={uid()} className={styles.mealItem}>
