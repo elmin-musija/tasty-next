@@ -21,7 +21,6 @@
 }
 
 .interestContainer {
-	width: 90%;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.8rem;
@@ -41,7 +40,6 @@
 }
 
 .premiumText {
-	width: 90%;
 	margin-bottom: 1.4rem;
 }
 
