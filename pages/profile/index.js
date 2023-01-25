@@ -16,9 +16,13 @@ const ProfilePage = ({ name, email, image, favoriteCategories }) => {
 			</div>
 			<div>
 				<h2 key={uid()}>Your Interests</h2>
-				<div>
+				<div className={styles.interestContainer}>
 					{favoriteCategories?.map((category) => (
-						<Link href={`/category/${category}`} key={uid()}>
+						<Link
+							href={`/category/${category}`}
+							key={uid()}
+							className={styles.interest}
+						>
 							{category}
 						</Link>
 					))}

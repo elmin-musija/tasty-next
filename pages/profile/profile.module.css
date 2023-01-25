@@ -20,6 +20,26 @@
 	margin-bottom: 1rem;
 }
 
+.interestContainer {
+	width: 90%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.8rem;
+}
+
+.interest {
+	background-color: #f1f5f5;
+	height: 3.5rem;
+	padding: 0.6rem 1.2rem;
+	border-radius: 10rem;
+	transition: all 0.2s;
+}
+
+.interest:hover {
+	background-color: #70b9be;
+	color: white;
+}
+
 .premiumText {
 	width: 90%;
 	margin-bottom: 1.4rem;
