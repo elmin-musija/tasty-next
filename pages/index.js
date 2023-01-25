@@ -1,5 +1,8 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Logo from "../components/logo/logo";
+import Loader from "../components/loader/loader";
+import styles from "./index.module.css";
 
 function SplashScreen() {
 	const router = useRouter();
@@ -13,8 +16,9 @@ function SplashScreen() {
 	}, []);
 
 	return (
-		<div>
-			<h1>Tasty</h1>
+		<div className={styles.splashScreen}>
+			<Logo />
+			<Loader />
 		</div>
 	);
 }
