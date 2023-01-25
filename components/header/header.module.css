@@ -1,4 +1,4 @@
 .header {
 	display: flex;
-	padding: 1rem var(--phonePadding) 0;
+	margin: 1rem var(--phonePadding) 2rem;
 }

@@ -6,7 +6,7 @@
 	display: flex;
 	align-items: center;
 	transition: all 0.2s;
-	margin: 2rem var(--phonePadding);
+	margin: 0rem var(--phonePadding) 2rem;
 }
 
 .searchIcon {

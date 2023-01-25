@@ -1,5 +1,5 @@
 .mealOfDay {
-	padding: 0 var(--phonePadding);
+	margin: 0 var(--phonePadding);
 }
 
 .mealOfDayItem {
