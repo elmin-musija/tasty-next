@@ -23,7 +23,9 @@ const Footer = () => {
 			</Link>
 
 			<Link href="/search">
-				{router.pathname === "/search" ? (
+				{router.pathname === "/search" ||
+				router.pathname === "/area" ||
+				router.pathname === "/category" ? (
 					<img src="/search-colored.svg" alt="search" className={styles.icon} />
 				) : (
 					<img src="/search.svg" alt="search" className={styles.icon} />
