@@ -70,7 +70,6 @@
 	border-radius: 0.5rem;
 	cursor: pointer;
 	font-size: inherit;
-	transition: all 0.2s;
 }
 
 .form input[type="button"] {
@@ -80,10 +79,4 @@
 	font-family: inherit;
 	border: none;
 	cursor: pointer;
-	transition: all 0.2s;
-	border-bottom: 1px solid var(--transparent);
-}
-
-.form input[type="button"]:hover {
-	border-bottom: 1px solid var(--primaryColorLinkText);
 }

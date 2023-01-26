@@ -24,14 +24,6 @@
 	border-radius: 1rem;
 	background-color: var(--lightGrayBg);
 	padding: 1.4rem;
-
-	transition: all 0.2s;
-}
-
-.catItem:hover,
-.catItemWithoutTN:hover {
-	background-color: var(--primaryColorBg);
-	color: white;
 }
 
 .catImg {
