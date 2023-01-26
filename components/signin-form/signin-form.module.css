@@ -14,20 +14,20 @@
 	align-items: center;
 
 	border-radius: 0.5rem;
-	border: 1px solid #e6ebf2;
-	box-shadow: 0 0 0.5rem #dbdbdb00;
+	border: 1px solid var(--lightGrayBorder);
+	box-shadow: 0 0 0.5rem var(--transparent);
 	transition: all 0.2s;
 
 	overflow: hidden;
 }
 
 .inputFieldContainer:focus-within {
-	border: 1px solid #70b9be;
-	box-shadow: 0 0 0.5rem #dbdbdb;
+	border: 1px solid var(--primaryColorBg);
+	box-shadow: 0 0 0.5rem var(--boxShadow);
 }
 
 .inputIconContainer {
-	background-color: #f1f5f5;
+	background-color: var(--lightGrayBg);
 	display: flex;
 	align-items: center;
 	padding: 1rem;
@@ -37,7 +37,7 @@
 }
 
 .inputFieldContainer:focus-within .inputIconContainer {
-	background-color: #70b9be;
+	background-color: var(--primaryColorBg);
 }
 
 .inputIcon {
@@ -63,7 +63,7 @@
 }
 
 .form input[type="submit"] {
-	background-color: #70b9be;
+	background-color: var(--primaryColorBg);
 	color: white;
 	border: none;
 	padding: 1rem;
@@ -74,16 +74,16 @@
 }
 
 .form input[type="button"] {
-	background-color: #00000000;
-	color: #029fab;
+	background-color: var(--transparent);
+	color: var(--primaryColorLinkText);
 	font-size: inherit;
 	font-family: inherit;
 	border: none;
 	cursor: pointer;
 	transition: all 0.2s;
-	border-bottom: 1px solid #029fab00;
+	border-bottom: 1px solid var(--transparent);
 }
 
 .form input[type="button"]:hover {
-	border-bottom: 1px solid #029fab;
+	border-bottom: 1px solid var(--primaryColorLinkText);
 }

@@ -5,28 +5,28 @@
 	margin: 0rem var(--phonePadding) 2rem;
 	overflow: hidden;
 
-	border: 1px solid #e6ebf2;
+	border: 1px solid var(--lightGrayBorder);
 	border-radius: 1rem;
-	box-shadow: 0 0 0.5rem #dbdbdb00;
+	box-shadow: 0 0 0.5rem var(--transparent);
 
 	transition: all 0.2s;
 }
 
 .searchbar:focus-within {
-	border: 1px solid #70b9be;
-	box-shadow: 0 0 0.5rem #dbdbdb;
+	border: 1px solid var(--primaryColorBg);
+	box-shadow: 0 0 0.5rem var(--boxShadow);
 }
 
 .searchIconContainer {
 	display: flex;
 	align-items: center;
-	background-color: #f1f5f5;
+	background-color: var(--lightGrayBg);
 	cursor: pointer;
 	transition: all 0.2s;
 }
 
 .searchbar:focus-within .searchIconContainer {
-	background-color: #70b9be;
+	background-color: var(--primaryColorBg);
 }
 
 .searchIcon {

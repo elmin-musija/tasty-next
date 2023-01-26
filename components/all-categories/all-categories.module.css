@@ -22,7 +22,7 @@
 
 	width: fit-content;
 	border-radius: 1rem;
-	background-color: #f1f5f5;
+	background-color: var(--lightGrayBg);
 	padding: 1.4rem;
 
 	transition: all 0.2s;
@@ -30,8 +30,8 @@
 
 .catItem:hover,
 .catItemWithoutTN:hover {
-	background-color: #70b9be;
-	color: #fff;
+	background-color: var(--primaryColorBg);
+	color: white;
 }
 
 .catImg {
@@ -40,7 +40,7 @@
 }
 
 .catItemWithoutTN {
-	background-color: #f1f5f5;
+	background-color: var(--lightGrayBg);
 	display: block;
 	width: fit-content;
 	padding: 0 1.4rem;
@@ -48,7 +48,7 @@
 	height: 3.5rem;
 	border-radius: 10rem;
 	font-size: 1.6rem;
-	color: #0a2533;
+	color: var(--darkBlue);
 	transition: all 0.2s;
 
 	display: flex;

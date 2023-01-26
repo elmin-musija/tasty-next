@@ -5,7 +5,7 @@
 .mealOfDayItem {
 	width: 26.5rem;
 	height: 17.5rem;
-	background-color: #70b9be;
+	background-color: var(--primaryColorBg);
 	border-radius: 16px;
 	background-image: url("../../public/meal-of-the-day.svg");
 	background-size: cover;
@@ -33,7 +33,7 @@
 
 .mealHeading {
 	font-size: 1.8rem;
-	color: #fff;
+	color: white;
 	font-weight: bold;
 	width: 70%;
 	margin-bottom: 1rem;
@@ -42,7 +42,10 @@
 .mealDetailsContainer {
 	display: flex;
 	justify-content: space-between;
-	color: #fff;
+}
+
+.mealDetailsContainer p {
+	color: white;
 }
 
 .categoryContainer {
@@ -55,7 +58,7 @@
 	display: block;
 	width: 16px;
 	height: 16px;
-	background-color: #c4c4c4;
+	background-color: var(--circleBg);
 	border: 1px solid white;
 	border-radius: 100%;
 }

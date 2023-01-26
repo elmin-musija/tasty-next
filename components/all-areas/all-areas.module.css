@@ -9,7 +9,7 @@
 }
 
 .areaList a {
-	background-color: #f1f5f5;
+	background-color: var(--lightGrayBg);
 	display: block;
 	width: fit-content;
 	padding: 0 1.4rem;
@@ -25,6 +25,6 @@
 }
 
 .areaList a:hover {
-	background-color: #70b9be;
-	color: #fff;
+	background-color: var(--primaryColorBg);
+	color: white;
 }

@@ -15,7 +15,7 @@
 }
 
 .areasItem a {
-	background-color: #f1f5f5;
+	background-color: var(--lightGrayBg);
 	width: 10rem;
 	height: 3.5rem;
 	border-radius: 10rem;
@@ -27,9 +27,4 @@
 	justify-content: center;
 
 	transition: all 0.2s;
-}
-
-.areasItem a:hover {
-	background-color: #70b9be;
-	color: #fff;
 }

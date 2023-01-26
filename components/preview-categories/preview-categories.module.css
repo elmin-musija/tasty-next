@@ -22,11 +22,10 @@
 	flex-direction: column;
 	padding: 2rem 1rem;
 	border-radius: 16px;
-	box-shadow: 0 0 10px rgb(237, 237, 237);
+	box-shadow: 0 0 10px var(--boxShadow);
 }
 
 .catItem p {
-	color: #0a2533;
 	font-size: 1.6rem;
 	font-weight: bold;
 	text-align: center;
@@ -39,7 +38,7 @@
 }
 
 .more {
-	color: #fff;
+	color: white;
 	align-self: center;
 	letter-spacing: 1px;
 	margin: 5px;
@@ -50,7 +49,7 @@
 	border-radius: 5rem;
 	width: 3rem;
 	height: 3rem;
-	background-color: #70b9be;
+	background-color: var(--primaryColorBg);
 }
 
 .more p {
