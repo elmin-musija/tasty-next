@@ -20,11 +20,13 @@ const Searchbar = () => {
 
 	return (
 		<div key={uid()} className={styles.searchbar} onClick={focusHandler}>
-			<img
-				src="/searchbar-icon.svg"
-				alt="Search Bar Icon"
-				className={styles.searchIcon}
-			/>
+			<div className={styles.searchIconContainer}>
+				<img
+					src="/searchbar-icon-black.svg"
+					alt="Search Bar Icon"
+					className={styles.searchIcon}
+				/>
+			</div>
 			<form onSubmit={onSubmitHandler}>
 				<input
 					type="text"
