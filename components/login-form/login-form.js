@@ -32,6 +32,14 @@ const LoginForm = (props) => {
 		await signIn("discord", { callbackUrl: "/favorites" });
 	};
 
+	const focusHandlerEmail = () => {
+		inputEmailRef.current.focus();
+	};
+
+	const focusHandlerPassword = () => {
+		inputPasswordRef.current.focus();
+	};
+
 	return (
 		<div className={styles.loginPage}>
 			<div className={styles.header}>
@@ -44,7 +52,7 @@ const LoginForm = (props) => {
 						<img
 							src="/google-logo.svg"
 							alt="Search Bar Icon"
-							className={styles.icon}
+							className={styles.serviceIcon}
 						/>
 					</button>
 					<button
@@ -54,7 +62,7 @@ const LoginForm = (props) => {
 						<img
 							src="/discord-logo-square.png"
 							alt="Search Bar Icon"
-							className={styles.icon}
+							className={styles.serviceIcon}
 						/>
 					</button>
 					<button
@@ -64,13 +72,13 @@ const LoginForm = (props) => {
 						<img
 							src="/github-dark-logo.svg"
 							alt="Search Bar Icon"
-							className={styles.icon}
+							className={styles.serviceIcon}
 						/>
 					</button>
 				</div>
 			</div>
 			<form onSubmit={onSubmitHandler} className={styles.form}>
-				<div className={styles.inputFieldContainer}>
+				<div onClick={focusHandlerEmail} className={styles.inputFieldContainer}>
 					<div className={styles.inputIconContainer}>
 						<img
 							src="/email.svg"
@@ -87,7 +95,10 @@ const LoginForm = (props) => {
 						required
 					/>
 				</div>
-				<div className={styles.inputFieldContainer}>
+				<div
+					onClick={focusHandlerPassword}
+					className={styles.inputFieldContainer}
+				>
 					<div className={styles.inputIconContainer}>
 						<img
 							src="/lock.svg"
