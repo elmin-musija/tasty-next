@@ -2,10 +2,10 @@ import React from "react";
 import { unstable_getServerSession } from "next-auth/next";
 import { NextAuthOptions } from "../../pages/api/auth/[...nextauth]";
 import { dbGetAllFavoritesByUser } from "../../src/db_access/favorites-DAO";
-import MealGallery from "../../components/meal-gallery/meal-gallery";
+import MealGalleryFavorites from "../../components/meal-gallery-favorites/meal-gallery-favorites";
 
 const FavoritesPage = ({ allFavorites }) => {
-	return <MealGallery category={"Favorites"} meals={allFavorites} />;
+	return <MealGalleryFavorites category={"Favorites"} meals={allFavorites} />;
 };
 
 export default FavoritesPage;

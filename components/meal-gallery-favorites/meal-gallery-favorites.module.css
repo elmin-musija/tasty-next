@@ -1,0 +1,56 @@
+.mealGallery {
+	padding: 0 var(--phonePadding);
+}
+
+.favContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-bottom: 3rem;
+}
+
+.mealItem {
+	padding: 0.7rem;
+	border-radius: 1rem;
+	box-shadow: 0 0 1rem var(--boxShadow);
+	overflow: hidden;
+
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.mealImg {
+	border-radius: 0.7rem;
+	width: 8.5rem;
+	height: auto;
+}
+
+.mealNameContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+}
+
+.mealNameContainer > div {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.mealName {
+	font-weight: 700;
+}
+
+.circle {
+	display: block;
+	width: 1.5rem;
+	height: 1.5rem;
+	background-color: var(--primaryColorBg);
+	border-radius: 100%;
+}
+
+.mealItem a {
+	width: 3rem;
+	margin-left: auto;
+}
