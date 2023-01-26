@@ -34,7 +34,7 @@ const Searchbar = () => {
 					id="input-search"
 					ref={inputRef}
 					required
-					placeholder="search for meal"
+					placeholder="Search for meal"
 				/>
 				{/* <input type="submit" value="Search" /> */}
 			</form>
