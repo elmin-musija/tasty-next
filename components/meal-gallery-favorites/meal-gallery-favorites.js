@@ -23,7 +23,7 @@ const MealGalleryFavorites = ({ category, meals }) => {
 							<p className={styles.mealName}>{element.strMeal}</p>
 							<div>
 								<div className={styles.circle}></div>
-								<p>{element.strCategory}</p>
+								<p className={styles.category}>{element.strCategory}</p>
 							</div>
 						</div>
 						<Link href={`/details/${element.idMeal}`}>
