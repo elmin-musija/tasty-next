@@ -20,14 +20,14 @@ function Header() {
 				{session && status === "authenticated" && (
 					<p>{session.user.name || session.user.email}</p>
 				)}
-				{router.pathname !== "/auth/login" && status !== "authenticated" && (
-					<LoginButton />
-				)}
+				{router.pathname !== "/auth/login" &&
+					router.pathname !== "/auth/signin" &&
+					status !== "authenticated" && <LoginButton />}
 				{status === "authenticated" && <LogoutButton />}
 			</div>
-			{router.pathname !== "/auth/login" && router.pathname !== "/profile" && (
-				<Searchbar />
-			)}
+			{router.pathname !== "/auth/login" &&
+				router.pathname !== "/auth/signin" &&
+				router.pathname !== "/profile" && <Searchbar />}
 		</>
 	);
 }
