@@ -17,6 +17,10 @@ const ProfilePage = ({ name, email, image, favoriteCategories }) => {
 		router.replace("/auth/login");
 	}
 
+	if (!image) {
+		image = "/logo.svg";
+	}
+
 	return (
 		<div className={styles.profile}>
 			<div>
