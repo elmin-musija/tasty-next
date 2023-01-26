@@ -21,6 +21,7 @@ export default function App({
 					</div>
 					<Footer />
 				</div>
+				<div className={styles.loudspeakerLine}></div>
 				<Link href="/" className={styles.homeBtn}></Link>
 			</div>
 		</SessionProvider>
