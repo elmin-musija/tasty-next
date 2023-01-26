@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/router";
 import styles from "./login-form.module.css";
+import stylesShared from "../signin-form/signin-form.module.css";
 
 const LoginForm = (props) => {
 	const router = useRouter();
@@ -77,13 +78,16 @@ const LoginForm = (props) => {
 					</button>
 				</div>
 			</div>
-			<form onSubmit={onSubmitHandler} className={styles.form}>
-				<div onClick={focusHandlerEmail} className={styles.inputFieldContainer}>
-					<div className={styles.inputIconContainer}>
+			<form onSubmit={onSubmitHandler} className={stylesShared.form}>
+				<div
+					onClick={focusHandlerEmail}
+					className={stylesShared.inputFieldContainer}
+				>
+					<div className={stylesShared.inputIconContainer}>
 						<img
 							src="/email.svg"
 							alt="Search Bar Icon"
-							className={styles.inputIcon}
+							className={stylesShared.inputIcon}
 						/>
 					</div>
 					<input
@@ -97,13 +101,13 @@ const LoginForm = (props) => {
 				</div>
 				<div
 					onClick={focusHandlerPassword}
-					className={styles.inputFieldContainer}
+					className={stylesShared.inputFieldContainer}
 				>
-					<div className={styles.inputIconContainer}>
+					<div className={stylesShared.inputIconContainer}>
 						<img
 							src="/lock.svg"
 							alt="Search Bar Icon"
-							className={styles.inputIcon}
+							className={stylesShared.inputIcon}
 						/>
 					</div>
 					<input
@@ -112,7 +116,6 @@ const LoginForm = (props) => {
 						id="input-password"
 						placeholder="Password"
 						ref={inputPasswordRef}
-						className={styles.btn}
 						required
 					/>
 				</div>

@@ -29,6 +29,26 @@ function SigninForm() {
 		inputLastNameRef.current.value = "";
 	};
 
+	const focusHandlerFirstName = () => {
+		inputFirstNameRef.current.focus();
+	};
+
+	const focusHandlerLastName = () => {
+		inputLastNameRef.current.focus();
+	};
+
+	const focusHandlerEmail = () => {
+		inputEmailRef.current.focus();
+	};
+
+	const focusHandlerPasswordFirst = () => {
+		inputPasswordFirstRef.current.focus();
+	};
+
+	const focusHandlerPasswordSecond = () => {
+		inputPasswordSecondRef.current.focus();
+	};
+
 	const onSubmitHandler = async (event) => {
 		event.preventDefault();
 
@@ -66,54 +86,100 @@ function SigninForm() {
 	};
 
 	return (
-		<div>
-			<h1>Signin</h1>
+		<div className={styles.signinPage}>
+			<h3>Sign in</h3>
 			<form className={styles.form} onSubmit={onSubmitHandler}>
-				<input
-					type="text"
-					name="input-firstname"
-					id="input-firstname"
-					placeholder="your firstname"
-					ref={inputFirstNameRef}
-					required
-				/>
-				<input
-					type="text"
-					name="input-lastname"
-					id="input-lastname"
-					placeholder="your lastname"
-					ref={inputLastNameRef}
-					required
-				/>
-				<input
-					type="email"
-					name="input-email"
-					id="input-email"
-					placeholder="email address"
-					ref={inputEmailRef}
-					required
-				/>
-				<input
-					type="password"
-					name="input-password-first"
-					id="input-password-first"
-					placeholder="password"
-					ref={inputPasswordFirstRef}
-					required
-				/>
-				<input
-					type="password"
-					name="input-password-second"
-					id="input-password-second"
-					placeholder="repeat password"
-					ref={inputPasswordSecondRef}
-				/>
-				<input type="submit" value="Signin" />
-				<input
-					type="button"
-					onClick={() => signIn()}
-					value="Already have an account?"
-				/>
+				<div
+					onClick={focusHandlerFirstName}
+					className={styles.inputFieldContainer}
+				>
+					<div className={styles.inputIconContainer}>
+						<img src="/user.png" alt="user icon" className={styles.inputIcon} />
+					</div>
+					<input
+						type="text"
+						name="input-firstname"
+						id="input-firstname"
+						placeholder="Firstname"
+						ref={inputFirstNameRef}
+						required
+					/>
+				</div>
+
+				<div
+					onClick={focusHandlerLastName}
+					className={styles.inputFieldContainer}
+				>
+					<div className={styles.inputIconContainer}>
+						<img src="/user.png" alt="user icon" className={styles.inputIcon} />
+					</div>
+					<input
+						type="text"
+						name="input-lastname"
+						id="input-lastname"
+						placeholder="Lastname"
+						ref={inputLastNameRef}
+						required
+					/>
+				</div>
+
+				<div onClick={focusHandlerEmail} className={styles.inputFieldContainer}>
+					<div className={styles.inputIconContainer}>
+						<img
+							src="/email.svg"
+							alt="email icon"
+							className={styles.inputIcon}
+						/>
+					</div>
+					<input
+						type="email"
+						name="input-email"
+						id="input-email"
+						placeholder="Email"
+						ref={inputEmailRef}
+						required
+					/>
+				</div>
+
+				<div
+					onClick={focusHandlerPasswordFirst}
+					className={styles.inputFieldContainer}
+				>
+					<div className={styles.inputIconContainer}>
+						<img src="/lock.svg" alt="lock icon" className={styles.inputIcon} />
+					</div>
+					<input
+						type="password"
+						name="input-password-first"
+						id="input-password-first"
+						placeholder="Password"
+						ref={inputPasswordFirstRef}
+						required
+					/>
+				</div>
+
+				<div
+					onClick={focusHandlerPasswordSecond}
+					className={styles.inputFieldContainer}
+				>
+					<div className={styles.inputIconContainer}>
+						<img src="/lock.svg" alt="lock icon" className={styles.inputIcon} />
+					</div>
+					<input
+						type="password"
+						name="input-password-second"
+						id="input-password-second"
+						placeholder="Repeat password"
+						ref={inputPasswordSecondRef}
+						required
+					/>
+				</div>
+
+				<input type="submit" value="Sign in" />
+				<p>
+					Already have an account?{" "}
+					<input type="button" onClick={() => signIn()} value="Log in" />.
+				</p>
 			</form>
 			{!passwordIsValid && <p>Wrong Password</p>}
 			{passwordIsValid && userCreated && <p>User created</p>}
