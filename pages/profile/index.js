@@ -37,10 +37,11 @@ const ProfilePage = ({ name, email, image, favoriteCategories }) => {
 			<div>
 				<h2 key={uid()}>Upgrade to Premium</h2>
 				<p key={uid()} className={styles.premiumText}>
-					You have a free Account, upgrade now to Premium for an even better
-					experience with Tasty! The AI algorithm displays you what you've been
-					looking for all day. Save unlimited favourites and interact with the
-					creators of the recipes.
+					You have a free Account, <span>upgrade now</span> to Premium for an
+					even better experience with Tasty! The AI algorithm displays you what
+					you've been looking for all day.{" "}
+					<span>Save unlimited favourites</span> and{" "}
+					<span>interact with the creators of the recipes</span>.
 				</p>
 				<button className={styles.upgradeBtn}>
 					<p>Upgrade</p>
