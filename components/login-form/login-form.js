@@ -33,8 +33,8 @@ const LoginForm = (props) => {
 	};
 
 	return (
-		<div>
-			<h1>Login</h1>
+		<div className={styles.loginPage}>
+			<h3>Login</h3>
 			<form onSubmit={onSubmitHandler} className={styles.form}>
 				<input
 					type="email"
@@ -49,19 +49,58 @@ const LoginForm = (props) => {
 					id="input-password"
 					placeholder="password"
 					ref={inputPasswordRef}
+					className={styles.btn}
 				/>
-				<input type="submit" value="login" />
-				<input
-					type="button"
-					onClick={() => {
-						router.push("/auth/signin");
-					}}
-					value="No Account? Sign up now!"
-				/>
+				<div className={styles.loginSignUpBtnContainer}>
+					<input type="submit" value="Login" />
+					<input
+						type="button"
+						onClick={() => {
+							router.push("/auth/signin");
+						}}
+						value="No Account? Sign up now!"
+					/>
+				</div>
 			</form>
-			<button onClick={onGitHubLoginHandler}>Login with Github</button>
-			<button onClick={onGoogleLoginHandler}>Login with Google</button>
-			<button onClick={onDiscordLoginHandler}>Login with Discord</button>
+			<p>
+				You can also use an existing account of one the following services
+				instead.
+			</p>
+			<div className={styles.serviceLogInBtnContainer}>
+				<button
+					onClick={onGitHubLoginHandler}
+					className={styles.serviceLogInBtn}
+				>
+					<img
+						src="/github-dark-logo.svg"
+						alt="Search Bar Icon"
+						className={styles.icon}
+					/>
+					<p>Github</p>
+				</button>
+				<button
+					onClick={onGoogleLoginHandler}
+					className={styles.serviceLogInBtn}
+				>
+					<img
+						src="/google-logo.svg"
+						alt="Search Bar Icon"
+						className={styles.icon}
+					/>
+					<p>Google</p>
+				</button>
+				<button
+					onClick={onDiscordLoginHandler}
+					className={styles.serviceLogInBtn}
+				>
+					<img
+						src="/discord-logo-blue.svg"
+						alt="Search Bar Icon"
+						className={styles.icon}
+					/>
+					<p>Discord</p>
+				</button>
+			</div>
 		</div>
 	);
 };
