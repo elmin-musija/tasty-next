@@ -1,6 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
+import Link from "next/link";
 import LoginButton from "../login-button/login-button";
 import LogoutButton from "../logout-button/logout-button";
 import Searchbar from "../searchbar/searchbar";
@@ -20,7 +21,9 @@ function Header() {
 				{session &&
 					status === "authenticated" &&
 					router.pathname !== "/profile" && (
-						<p>{session.user.name || session.user.email}</p>
+						<Link href="/profile">
+							{session.user.name || session.user.email}
+						</Link>
 					)}
 				{router.pathname !== "/auth/login" &&
 					router.pathname !== "/auth/signin" &&
