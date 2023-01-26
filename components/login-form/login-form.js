@@ -34,73 +34,91 @@ const LoginForm = (props) => {
 
 	return (
 		<div className={styles.loginPage}>
-			<h3>Login</h3>
+			<div className={styles.header}>
+				<h3>Login</h3>
+				<div className={styles.serviceLogInBtnContainer}>
+					<button
+						onClick={onGoogleLoginHandler}
+						className={styles.serviceLogInBtn}
+					>
+						<img
+							src="/google-logo.svg"
+							alt="Search Bar Icon"
+							className={styles.icon}
+						/>
+					</button>
+					<button
+						onClick={onDiscordLoginHandler}
+						className={styles.serviceLogInBtn}
+					>
+						<img
+							src="/discord-logo-square.png"
+							alt="Search Bar Icon"
+							className={styles.icon}
+						/>
+					</button>
+					<button
+						onClick={onGitHubLoginHandler}
+						className={styles.serviceLogInBtn}
+					>
+						<img
+							src="/github-dark-logo.svg"
+							alt="Search Bar Icon"
+							className={styles.icon}
+						/>
+					</button>
+				</div>
+			</div>
 			<form onSubmit={onSubmitHandler} className={styles.form}>
-				<input
-					type="email"
-					name="input-email"
-					id="input-email"
-					placeholder="email address"
-					ref={inputEmailRef}
-				/>
-				<input
-					type="password"
-					name="input-password"
-					id="input-password"
-					placeholder="password"
-					ref={inputPasswordRef}
-					className={styles.btn}
-				/>
-				<div className={styles.loginSignUpBtnContainer}>
-					<input type="submit" value="Login" />
+				<div className={styles.inputFieldContainer}>
+					<div className={styles.inputIconContainer}>
+						<img
+							src="/email.svg"
+							alt="Search Bar Icon"
+							className={styles.inputIcon}
+						/>
+					</div>
+					<input
+						type="email"
+						name="input-email"
+						id="input-email"
+						placeholder="Email"
+						ref={inputEmailRef}
+						required
+					/>
+				</div>
+				<div className={styles.inputFieldContainer}>
+					<div className={styles.inputIconContainer}>
+						<img
+							src="/lock.svg"
+							alt="Search Bar Icon"
+							className={styles.inputIcon}
+						/>
+					</div>
+					<input
+						type="password"
+						name="input-password"
+						id="input-password"
+						placeholder="Password"
+						ref={inputPasswordRef}
+						className={styles.btn}
+						required
+					/>
+				</div>
+				<input type="submit" value="Login" />
+
+				<p>
+					No Account?{" "}
 					<input
 						type="button"
 						onClick={() => {
 							router.push("/auth/signin");
 						}}
-						value="No Account? Sign up now!"
-					/>
-				</div>
+						value="Sign up"
+					/>{" "}
+					now.
+				</p>
 			</form>
-			<p>
-				You can also use an existing account of one the following services
-				instead.
-			</p>
-			<div className={styles.serviceLogInBtnContainer}>
-				<button
-					onClick={onGitHubLoginHandler}
-					className={styles.serviceLogInBtn}
-				>
-					<img
-						src="/github-dark-logo.svg"
-						alt="Search Bar Icon"
-						className={styles.icon}
-					/>
-					<p>Github</p>
-				</button>
-				<button
-					onClick={onGoogleLoginHandler}
-					className={styles.serviceLogInBtn}
-				>
-					<img
-						src="/google-logo.svg"
-						alt="Search Bar Icon"
-						className={styles.icon}
-					/>
-					<p>Google</p>
-				</button>
-				<button
-					onClick={onDiscordLoginHandler}
-					className={styles.serviceLogInBtn}
-				>
-					<img
-						src="/discord-logo-blue.svg"
-						alt="Search Bar Icon"
-						className={styles.icon}
-					/>
-					<p>Discord</p>
-				</button>
-			</div>
 		</div>
 	);
 };
