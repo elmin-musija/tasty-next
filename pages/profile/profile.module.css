@@ -51,7 +51,11 @@
 	margin: 0 auto;
 	display: flex;
 	align-items: center;
-	background-color: var(--primaryColorBg);
+	background-image: linear-gradient(
+		to right bottom,
+		var(--primaryColorBg2),
+		var(--primaryColorBg)
+	);
 	border: none;
 	padding: 1rem 2rem;
 	border-radius: 5rem;
