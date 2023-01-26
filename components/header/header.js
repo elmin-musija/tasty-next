@@ -17,9 +17,11 @@ function Header() {
 	return (
 		<>
 			<div className={styles.header}>
-				{session && status === "authenticated" && (
-					<p>{session.user.name || session.user.email}</p>
-				)}
+				{session &&
+					status === "authenticated" &&
+					router.pathname !== "/profile" && (
+						<p>{session.user.name || session.user.email}</p>
+					)}
 				{router.pathname !== "/auth/login" &&
 					router.pathname !== "/auth/signin" &&
 					status !== "authenticated" && <LoginButton />}
