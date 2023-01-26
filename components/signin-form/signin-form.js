@@ -177,8 +177,8 @@ function SigninForm() {
 
 				<input type="submit" value="Sign in" />
 				<p>
-					Already have an account?{" "}
-					<input type="button" onClick={() => signIn()} value="Log in" />.
+					Already have an account? Go to{" "}
+					<input type="button" onClick={() => signIn()} value="Log in" />!
 				</p>
 			</form>
 			{!passwordIsValid && <p>Wrong Password</p>}

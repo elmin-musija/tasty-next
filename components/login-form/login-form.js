@@ -130,7 +130,7 @@ const LoginForm = (props) => {
 						}}
 						value="Sign up"
 					/>{" "}
-					now.
+					now!
 				</p>
 			</form>
 		</div>
