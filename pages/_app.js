@@ -10,7 +10,7 @@ export default function App({
 	pageProps: { session, ...pageProps },
 }) {
 	return (
-		<SessionProvider session={session}>
+		<SessionProvider session={session} refetchInterval={60 * 6}>
 			<div className={styles.app}>
 				<div className={styles.phone}>
 					<div className={styles.content}>

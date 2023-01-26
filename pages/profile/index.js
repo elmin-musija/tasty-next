@@ -1,6 +1,8 @@
 import React from "react";
 import { unstable_getServerSession } from "next-auth";
 import { NextAuthOptions } from "../api/auth/[...nextauth]";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 import { uid } from "uid";
@@ -8,6 +10,13 @@ import { dbGetAllFavoriteCategoriesByUser } from "../../src/db_access/favorites-
 import styles from "./profile.module.css";
 
 const ProfilePage = ({ name, email, image, favoriteCategories }) => {
+	const { data: session, status } = useSession();
+	const router = useRouter();
+
+	if (!session && status === "unauthenticated") {
+		router.replace("/auth/login");
+	}
+
 	return (
 		<div className={styles.profile}>
 			<div>

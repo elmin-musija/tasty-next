@@ -1,5 +1,5 @@
 import React from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 import { useRef } from "react";
 import { uid } from "uid";
 import styles from "./searchbar.module.css";
