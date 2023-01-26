@@ -74,7 +74,7 @@ export async function getServerSideProps(context) {
 		return { redirect: { destination: "/auth/login", permanent: false } };
 	}
 
-	const { name, email, image } = session.user;
+	const { name, email, image = "" } = session.user;
 	/**
 	 * get all categories of favorite meals by user
 	 */
