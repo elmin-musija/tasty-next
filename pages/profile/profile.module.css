@@ -28,7 +28,11 @@
 }
 
 .interest {
-	background-color: var(--lightGrayBg);
+	background-image: linear-gradient(
+		to right bottom,
+		var(--lightGrayBg),
+		var(--lightGrayBorder)
+	);
 	height: 3.5rem;
 	padding: 0.6rem 1.2rem;
 	border-radius: 10rem;

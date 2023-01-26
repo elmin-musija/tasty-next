@@ -22,7 +22,11 @@
 
 	width: fit-content;
 	border-radius: 1rem;
-	background-color: var(--lightGrayBg);
+	background-image: linear-gradient(
+		to right bottom,
+		var(--lightGrayBg),
+		var(--lightGrayBorder)
+	);
 	padding: 1.4rem;
 }
 
@@ -32,7 +36,11 @@
 }
 
 .catItemWithoutTN {
-	background-color: var(--lightGrayBg);
+	background-image: linear-gradient(
+		to right bottom,
+		var(--lightGrayBg),
+		var(--lightGrayBorder)
+	);
 	display: block;
 	width: fit-content;
 	padding: 0 1.4rem;

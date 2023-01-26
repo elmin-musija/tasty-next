@@ -15,7 +15,11 @@
 }
 
 .areasItem a {
-	background-color: var(--lightGrayBg);
+	background-image: linear-gradient(
+		to right bottom,
+		var(--lightGrayBg),
+		var(--lightGrayBorder)
+	);
 	width: 10rem;
 	height: 3.5rem;
 	border-radius: 10rem;

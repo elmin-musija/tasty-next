@@ -3,11 +3,12 @@
 
 	/* ----- Colors ----- */
 	--primaryColorBg: #70b9be;
+	--primaryColorBg2: #96d9dd;
 	/* primaryColorLinkText for link text */
 	--primaryColorLinkText: #01a5b1;
 	/* dark blue for website background and overall text color: */
 	--darkBlue: #0a2533;
-	--lightGrayBg: #f1f5f5;
+	--lightGrayBg: #f3f5f5;
 	--lightGrayBorder: #e6ebf2;
 	--boxShadow: #dbdbdb;
 	--circleBg: #c4c4c4;
@@ -37,7 +38,7 @@ html {
 }
 
 section {
-	margin-bottom: 3rem;
+	margin-bottom: 3.5rem;
 }
 
 p,

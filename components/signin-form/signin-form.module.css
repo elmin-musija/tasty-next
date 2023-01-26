@@ -63,7 +63,11 @@
 }
 
 .form input[type="submit"] {
-	background-color: var(--primaryColorBg);
+	background-image: linear-gradient(
+		to right bottom,
+		var(--primaryColorBg2),
+		var(--primaryColorBg)
+	);
 	color: white;
 	border: none;
 	padding: 1rem;

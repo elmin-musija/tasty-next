@@ -1,5 +1,9 @@
 .btn {
-	background-color: var(--primaryColorBg);
+	background-image: linear-gradient(
+		to right bottom,
+		var(--primaryColorBg2),
+		var(--primaryColorBg)
+	);
 	color: white;
 	border: none;
 	padding: 0.5rem 1rem;
