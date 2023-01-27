@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import Logo from "../components/logo/logo";
 import Loader from "../components/loader/loader";
 import styles from "./index.module.css";
+import { motion } from "framer-motion";
+import AnimatedLogo from "../components/animated-logo/animated-logo";
 
 function SplashScreen() {
 	const router = useRouter();
@@ -17,7 +19,7 @@ function SplashScreen() {
 
 	return (
 		<div className={styles.splashScreen}>
-			<Logo />
+			<AnimatedLogo />
 			<Loader />
 		</div>
 	);
