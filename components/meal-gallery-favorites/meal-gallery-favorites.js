@@ -11,25 +11,31 @@ const MealGalleryFavorites = ({ category, meals }) => {
 			<div className={styles.favContainer}>
 				{meals.map((element) => (
 					<div key={uid()} className={styles.mealItem}>
-						<Image
-							src={element.strMealThumb}
-							alt={element.strMeal}
-							width={100}
-							height={100}
-							priority
-							className={styles.mealImg}
-						/>
+						<Link href={`/details/${element.idMeal}`}>
+							<Image
+								src={element.strMealThumb}
+								alt={element.strMeal}
+								width={100}
+								height={100}
+								priority
+								className={styles.mealImg}
+							/>
+						</Link>
 
 						<div className={styles.mealNameContainer}>
 							<p className={styles.mealName}>{element.strMeal}</p>
-							<div>
+							<Link
+								href={`/category/${element.strCategory}`}
+								className={styles.categoryContainer}
+							>
 								<div className={styles.circle}></div>
-								<Link href={`/category/${element.strCategory}`}>
-									{element.strCategory}
-								</Link>
-							</div>
+								{element.strCategory}
+							</Link>
 						</div>
-						<Link href={`/details/${element.idMeal}`}>
+						<Link
+							href={`/details/${element.idMeal}`}
+							className={styles.arrowBtn}
+						>
 							<img
 								src="/arrow-right.svg"
 								alt="arrow"

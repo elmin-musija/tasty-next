@@ -24,6 +24,7 @@
 	border-radius: 0.7rem;
 	width: 8.5rem;
 	height: auto;
+	display: block;
 }
 
 .mealNameContainer {
@@ -32,10 +33,11 @@
 	gap: 0.8rem;
 }
 
-.mealNameContainer > div {
+.categoryContainer {
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
+	width: fit-content;
 }
 
 .mealName {
@@ -54,7 +56,7 @@
 	border-radius: 100%;
 }
 
-.mealItem a {
+.arrowBtn {
 	width: 3rem;
 	margin-left: auto;
 }
