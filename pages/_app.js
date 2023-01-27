@@ -1,4 +1,5 @@
 import { SessionProvider } from "next-auth/react";
+import Head from "next/head";
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
 import Link from "next/link";
@@ -14,12 +15,27 @@ export default function App({
 			<div className={styles.app}>
 				<div className={styles.phone}>
 					<div className={styles.content}>
-						<Header />
-						<div className={styles.page}>
-							<Component {...pageProps} />
-						</div>
+						<Head>
+							<title>Tasty App</title>
+							<meta name="description" content="Tasty App" />
+							<meta
+								name="viewport"
+								content="width=device-width, initial-scale=1"
+							/>
+							<link rel="icon" href="/favicon.png" />
+						</Head>
+						<header>
+							<Header />
+						</header>
+						<main>
+							<div className={styles.page}>
+								<Component {...pageProps} />
+							</div>
+						</main>
 					</div>
-					<Footer />
+					<footer>
+						<Footer />
+					</footer>
 				</div>
 				<div className={styles.loudspeakerLine}></div>
 				<Link href="/" className={styles.homeBtn}></Link>
