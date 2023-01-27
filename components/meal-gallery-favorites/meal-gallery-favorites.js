@@ -19,11 +19,14 @@ const MealGalleryFavorites = ({ category, meals }) => {
 							priority
 							className={styles.mealImg}
 						/>
+
 						<div className={styles.mealNameContainer}>
 							<p className={styles.mealName}>{element.strMeal}</p>
 							<div>
 								<div className={styles.circle}></div>
-								<p className={styles.category}>{element.strCategory}</p>
+								<Link href={`/category/${element.strCategory}`}>
+									{element.strCategory}
+								</Link>
 							</div>
 						</div>
 						<Link href={`/details/${element.idMeal}`}>
