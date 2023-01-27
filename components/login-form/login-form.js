@@ -85,7 +85,7 @@ const LoginForm = (props) => {
 				>
 					<div className={stylesShared.inputIconContainer}>
 						<img
-							src="/email.svg"
+							src="/email.png"
 							alt="Search Bar Icon"
 							className={stylesShared.inputIcon}
 						/>
@@ -105,7 +105,7 @@ const LoginForm = (props) => {
 				>
 					<div className={stylesShared.inputIconContainer}>
 						<img
-							src="/lock.svg"
+							src="/lock.png"
 							alt="Search Bar Icon"
 							className={stylesShared.inputIcon}
 						/>

@@ -126,7 +126,7 @@ function SigninForm() {
 				<div onClick={focusHandlerEmail} className={styles.inputFieldContainer}>
 					<div className={styles.inputIconContainer}>
 						<img
-							src="/email.svg"
+							src="/email.png"
 							alt="email icon"
 							className={styles.inputIcon}
 						/>
@@ -146,7 +146,7 @@ function SigninForm() {
 					className={styles.inputFieldContainer}
 				>
 					<div className={styles.inputIconContainer}>
-						<img src="/lock.svg" alt="lock icon" className={styles.inputIcon} />
+						<img src="/lock.png" alt="lock icon" className={styles.inputIcon} />
 					</div>
 					<input
 						type="password"
@@ -163,7 +163,7 @@ function SigninForm() {
 					className={styles.inputFieldContainer}
 				>
 					<div className={styles.inputIconContainer}>
-						<img src="/lock.svg" alt="lock icon" className={styles.inputIcon} />
+						<img src="/lock.png" alt="lock icon" className={styles.inputIcon} />
 					</div>
 					<input
 						type="password"
