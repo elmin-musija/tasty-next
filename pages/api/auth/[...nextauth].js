@@ -49,7 +49,6 @@ export const NextAuthOptions = {
 					 * entered password is valid, user is logged in
 					 */
 					if (enteredPasswordIsValid) {
-						console.log("User logged in");
 						return { name: user.firstname, email: user.email };
 					} else {
 						throw new Error("Error, invalid password!");

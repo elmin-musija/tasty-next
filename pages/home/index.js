@@ -6,6 +6,7 @@ import {
 import MealOfTheDay from "../../components/meal-of-the-day/meal-of-the-day";
 import PreviewAreas from "../../components/preview-areas/preview-areas";
 import PreviewCategories from "../../components/preview-categories/preview-categories";
+import NewsletterForm from "../../components/newsletter-form/newsletter-form";
 
 export default function Home({
 	mealOfTheDay,
@@ -14,6 +15,7 @@ export default function Home({
 }) {
 	return (
 		<div>
+			<NewsletterForm />
 			<section>
 				<MealOfTheDay randomMeal={mealOfTheDay} />
 			</section>
