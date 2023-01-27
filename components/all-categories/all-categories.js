@@ -27,7 +27,7 @@ const AllCategories = ({ allCategories, showThumbnail }) => {
 								className={styles.catImg}
 							/>
 						)}
-						<p>{element.strCategory}</p>
+						<p className={styles.catName}>{element.strCategory}</p>
 					</Link>
 				))}
 			</div>

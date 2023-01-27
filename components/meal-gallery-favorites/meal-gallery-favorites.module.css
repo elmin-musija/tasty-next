@@ -56,6 +56,24 @@
 	border-radius: 100%;
 }
 
+.categoryName {
+	color: var(--primaryColorBg);
+}
+
+.arrowContainer {
+	background-color: var(--darkBlue);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 3rem;
+	border-radius: 1rem;
+	transition: var(--transition);
+}
+
+.arrowContainer:hover {
+	background-color: var(--darkBlue2);
+}
+
 .arrowBtn {
 	width: 3rem;
 	margin-left: auto;

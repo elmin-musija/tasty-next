@@ -15,11 +15,7 @@
 }
 
 .areasItem a {
-	background-image: linear-gradient(
-		to right bottom,
-		var(--lightGrayBg),
-		var(--lightGrayBorder)
-	);
+	background-color: var(--lightGrayBg);
 	width: 10rem;
 	height: 3.5rem;
 	border-radius: 10rem;
@@ -30,5 +26,10 @@
 	align-items: center;
 	justify-content: center;
 
-	transition: all 0.2s;
+	transition: var(--transition);
+}
+
+.areasItem a:hover {
+	background-color: var(--primaryColorBg);
+	color: white;
 }

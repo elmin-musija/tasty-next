@@ -1,13 +1,13 @@
 .btn {
-	background-image: linear-gradient(
-		to right bottom,
-		var(--primaryColorBg2),
-		var(--primaryColorBg)
-	);
+	background-color: var(--primaryColorBg);
 	color: white;
 	border: none;
 	padding: 0.5rem 1rem;
 	border-radius: 0.7rem;
 	cursor: pointer;
-	transition: all 0.2s;
+	transition: var(--transition);
+}
+
+.btn:hover {
+	background-color: var(--primaryColorBg2);
 }

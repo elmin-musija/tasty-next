@@ -10,11 +10,6 @@
 
 .areaList a {
 	background-color: var(--lightGrayBg);
-	background-image: linear-gradient(
-		to right bottom,
-		var(--lightGrayBg),
-		var(--lightGrayBorder)
-	);
 	display: block;
 	width: fit-content;
 	padding: 0 1.4rem;
@@ -23,7 +18,13 @@
 	border-radius: 10rem;
 	font-size: 1.6rem;
 	color: #0a2533;
+	transition: var(--transition);
 
 	display: flex;
 	align-items: center;
+}
+
+.areaList a:hover {
+	background-color: var(--primaryColorBg);
+	color: white;
 }

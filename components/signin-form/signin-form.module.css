@@ -16,7 +16,7 @@
 	border-radius: 0.5rem;
 	border: 1px solid var(--lightGrayBorder);
 	box-shadow: 0 0 0.5rem var(--transparent);
-	transition: all 0.2s;
+	transition: var(--transition);
 
 	overflow: hidden;
 }
@@ -33,7 +33,7 @@
 	padding: 1rem;
 	margin-right: 1rem;
 	cursor: pointer;
-	transition: all 0.2s;
+	transition: var(--transition);
 }
 
 .inputFieldContainer:focus-within .inputIconContainer {
@@ -42,7 +42,6 @@
 
 .inputIcon {
 	width: 1.6rem;
-	/* height: auto; */
 }
 
 .form input[type="text"],
@@ -63,17 +62,18 @@
 }
 
 .form input[type="submit"] {
-	background-image: linear-gradient(
-		to right bottom,
-		var(--primaryColorBg2),
-		var(--primaryColorBg)
-	);
+	background-color: var(--primaryColorBg);
 	color: white;
 	border: none;
 	padding: 1rem;
 	border-radius: 0.5rem;
 	cursor: pointer;
 	font-size: inherit;
+	transition: var(--transition);
+}
+
+.form input[type="submit"]:hover {
+	background-color: var(--primaryColorBg2);
 }
 
 .form input[type="button"] {

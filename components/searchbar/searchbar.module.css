@@ -9,7 +9,7 @@
 	border-radius: 1rem;
 	box-shadow: 0 0 0.5rem var(--transparent);
 
-	transition: all 0.2s;
+	transition: var(--transition);
 }
 
 .searchbar:focus-within {
@@ -22,7 +22,7 @@
 	align-items: center;
 	background-color: var(--lightGrayBg);
 	cursor: pointer;
-	transition: all 0.2s;
+	transition: var(--transition);
 }
 
 .searchbar:focus-within .searchIconContainer {

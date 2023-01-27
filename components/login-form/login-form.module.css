@@ -23,7 +23,11 @@
 	background-color: var(--lightGrayBg);
 	cursor: pointer;
 	font-size: inherit;
-	transition: all 0.2s;
+	transition: var(--transition);
+}
+
+.serviceLogInBtn:hover {
+	background-color: var(--primaryColorBg);
 }
 
 .serviceIcon {

@@ -1,13 +1,15 @@
 :root {
 	--phonePadding: 1.5rem;
+	--transition: all 0.2s;
 
 	/* ----- Colors ----- */
 	--primaryColorBg: #70b9be;
-	--primaryColorBg2: #96d9dd;
+	--primaryColorBg2: #74ced2;
 	/* primaryColorLinkText for link text */
 	--primaryColorLinkText: #01a5b1;
 	/* dark blue for website background and overall text color: */
 	--darkBlue: #0a2533;
+	--darkBlue2: #0d4144;
 	--lightGrayBg: #f3f5f5;
 	--lightGrayBorder: #e6ebf2;
 	--boxShadow: #dbdbdb;

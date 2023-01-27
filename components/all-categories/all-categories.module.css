@@ -22,12 +22,21 @@
 
 	width: fit-content;
 	border-radius: 1rem;
-	background-image: linear-gradient(
-		to right bottom,
-		var(--lightGrayBg),
-		var(--lightGrayBorder)
-	);
+	background-color: var(--lightGrayBg);
 	padding: 1.4rem;
+	transition: var(--transition);
+}
+
+.catItem:hover {
+	background-color: var(--primaryColorBg);
+}
+
+.catItem .catName {
+	transition: var(--transition);
+}
+
+.catItem:hover .catName {
+	color: white;
 }
 
 .catImg {
@@ -36,11 +45,7 @@
 }
 
 .catItemWithoutTN {
-	background-image: linear-gradient(
-		to right bottom,
-		var(--lightGrayBg),
-		var(--lightGrayBorder)
-	);
+	background-color: var(--lightGrayBg);
 	display: block;
 	width: fit-content;
 	padding: 0 1.4rem;
@@ -49,8 +54,16 @@
 	border-radius: 10rem;
 	font-size: 1.6rem;
 	color: var(--darkBlue);
-	transition: all 0.2s;
+	transition: var(--transition);
 
 	display: flex;
 	align-items: center;
+}
+
+.catItemWithoutTN:hover {
+	background-color: var(--primaryColorBg);
+}
+
+.catItemWithoutTN:hover .catName {
+	color: white;
 }

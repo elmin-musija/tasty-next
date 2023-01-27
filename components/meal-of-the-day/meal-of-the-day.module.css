@@ -11,6 +11,11 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding: 1.5rem;
+	transition: var(--transition);
+}
+
+.mealOfDayItem:hover {
+	background-color: var(--primaryColorBg2);
 }
 
 .mealOfDayItem a {

@@ -29,18 +29,20 @@ const MealGalleryFavorites = ({ category, meals }) => {
 								className={styles.categoryContainer}
 							>
 								<div className={styles.circle}></div>
-								{element.strCategory}
+								<p className={styles.categoryName}>{element.strCategory}</p>
 							</Link>
 						</div>
 						<Link
 							href={`/details/${element.idMeal}`}
 							className={styles.arrowBtn}
 						>
-							<img
-								src="/arrow-right.svg"
-								alt="arrow"
-								className={styles.arrow}
-							/>
+							<div className={styles.arrowContainer}>
+								<img
+									src="/arrow-right.svg"
+									alt="arrow"
+									className={styles.arrow}
+								/>
+							</div>
 						</Link>
 					</div>
 				))}

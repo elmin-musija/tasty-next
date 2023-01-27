@@ -49,15 +49,21 @@
 	border-radius: 5rem;
 	width: 3rem;
 	height: 3rem;
-	background-image: linear-gradient(
-		to right bottom,
-		var(--primaryColorBg2),
-		var(--primaryColorBg)
-	);
+	background-color: var(--lightGrayBg);
+	transition: var(--transition);
+}
+
+.more:hover {
+	background-color: var(--primaryColorBg);
 }
 
 .more p {
 	margin-bottom: 0.8rem;
+	transition: var(--transition);
+}
+
+.more:hover p {
+	color: white;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
