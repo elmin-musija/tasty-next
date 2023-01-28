@@ -18,17 +18,22 @@ function Header() {
 	return (
 		<>
 			<div className={styles.header}>
-				{session &&
-					status === "authenticated" &&
-					router.pathname !== "/profile" && (
-						<Link href="/profile">
-							{session.user.name || session.user.email}
-						</Link>
-					)}
-				{router.pathname !== "/auth/login" &&
-					router.pathname !== "/auth/signin" &&
-					status !== "authenticated" && <LoginButton />}
-				{status === "authenticated" && <LogoutButton />}
+				<div>
+					<img src="/logo-blue.svg" alt="Logo" className={styles.logo} />
+				</div>
+				<div className={styles.user}>
+					{session &&
+						status === "authenticated" &&
+						router.pathname !== "/profile" && (
+							<Link href="/profile">
+								{session.user.name || session.user.email}
+							</Link>
+						)}
+					{router.pathname !== "/auth/login" &&
+						router.pathname !== "/auth/signin" &&
+						status !== "authenticated" && <LoginButton />}
+					{status === "authenticated" && <LogoutButton />}
+				</div>
 			</div>
 			{router.pathname !== "/auth/login" &&
 				router.pathname !== "/auth/signin" &&

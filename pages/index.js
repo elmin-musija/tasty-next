@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
-import Logo from "../components/logo/logo";
 import Loader from "../components/loader/loader";
 import styles from "./index.module.css";
 import AnimatedLogo from "../components/animated-logo/animated-logo";
