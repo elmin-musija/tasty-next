@@ -27,7 +27,7 @@ const NewsletterForm = () => {
 			<h2>Newsletter</h2>
 			<p>
 				Subscribe to the Tasty newsletter and we keep you updated with brand new
-				recipies
+				recipies.
 			</p>
 			<form onSubmit={onSubmitNewsletterHandler} className={styles.form}>
 				<div onClick={focusHandlerEmail} className={styles.inputFieldContainer}>
