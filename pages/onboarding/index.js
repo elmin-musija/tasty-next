@@ -30,7 +30,7 @@ const OnboardingPage = () => {
 									"sweet",
 									"flavourful",
 								]}
-								loop={2}
+								loop={0}
 								typeSpeed={100}
 								deleteSpeed={80}
 								delaySpeed={2000}
