@@ -128,7 +128,7 @@ const LoginForm = (props) => {
 						onClick={() => {
 							router.push("/auth/signin");
 						}}
-						value="Sign up"
+						value="Register"
 					/>{" "}
 					now!
 				</p>

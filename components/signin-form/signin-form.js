@@ -87,7 +87,7 @@ function SigninForm() {
 
 	return (
 		<div className={styles.signinPage}>
-			<h3>Sign in</h3>
+			<h3>Register</h3>
 			<form className={styles.form} onSubmit={onSubmitHandler}>
 				<div
 					onClick={focusHandlerFirstName}
@@ -175,10 +175,10 @@ function SigninForm() {
 					/>
 				</div>
 
-				<input type="submit" value="Sign in" />
+				<input type="submit" value="Register" />
 				<p>
 					Already have an account? Go to{" "}
-					<input type="button" onClick={() => signIn()} value="Log in" />!
+					<input type="button" onClick={() => signIn()} value="Log in" /> page!
 				</p>
 			</form>
 			{!passwordIsValid && <p>Wrong Password</p>}
