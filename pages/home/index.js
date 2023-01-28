@@ -20,7 +20,6 @@ export default function Home({
 			animate={{ opacity: 1 }}
 			transition={{ duration: 0.5 }}
 		>
-			<NewsletterForm />
 			<section>
 				<MealOfTheDay randomMeal={mealOfTheDay} />
 			</section>
@@ -29,6 +28,9 @@ export default function Home({
 			</section>
 			<section>
 				<PreviewCategories previewCategories={previewCategories} />
+			</section>
+			<section>
+				<NewsletterForm />
 			</section>
 		</motion.div>
 	);

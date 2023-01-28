@@ -1,5 +1,6 @@
 import React from "react";
 import { useRef } from "react";
+import styles from "./newsletter-form.module.css";
 
 const NewsletterForm = () => {
 	const inputEmailNewsletterRef = useRef();
@@ -17,18 +18,38 @@ const NewsletterForm = () => {
 		 */
 	};
 
+	const focusHandlerEmail = () => {
+		inputEmailNewsletterRef.current.focus();
+	};
+
 	return (
-		<form onSubmit={onSubmitNewsletterHandler}>
-			<input
-				type="email"
-				name="input-email"
-				id="input-email"
-				ref={inputEmailNewsletterRef}
-				placeholder="Subscribe for the tasty newsletter"
-				required
-			/>
-			<input type="submit" value="Subscribe" />
-		</form>
+		<section className={styles.newsletter}>
+			<h2>Newsletter</h2>
+			<p>
+				Subscribe to the Tasty newsletter and we keep you updated with brand new
+				recipies
+			</p>
+			<form onSubmit={onSubmitNewsletterHandler} className={styles.form}>
+				<div onClick={focusHandlerEmail} className={styles.inputFieldContainer}>
+					<div className={styles.inputIconContainer}>
+						<img
+							src="/email.svg"
+							alt="email icon"
+							className={styles.inputIcon}
+						/>
+					</div>
+					<input
+						type="email"
+						name="input-email"
+						id="input-email"
+						ref={inputEmailNewsletterRef}
+						placeholder="Email"
+						required
+					/>
+				</div>
+				<input type="submit" value="Subscribe" className={styles.btn} />
+			</form>
+		</section>
 	);
 };
 

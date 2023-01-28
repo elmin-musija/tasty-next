@@ -1,0 +1,76 @@
+.newsletter {
+	margin: 0 var(--phonePadding);
+}
+
+.newsletter > p {
+	margin-bottom: 1.5rem;
+}
+
+.form {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.5rem;
+}
+
+.inputFieldContainer {
+	width: 100%;
+	display: flex;
+	align-items: center;
+
+	border-radius: 0.5rem;
+	border: 1px solid var(--lightGrayBorder);
+	box-shadow: 0 0 0.5rem var(--transparent);
+	transition: var(--transition);
+
+	overflow: hidden;
+}
+
+.inputFieldContainer:focus-within {
+	border: 1px solid var(--primaryColorBg);
+	box-shadow: 0 0 0.5rem var(--boxShadow);
+}
+
+.inputIconContainer {
+	background-color: var(--lightGrayBg);
+	display: flex;
+	align-items: center;
+	padding: 1rem;
+	margin-right: 1rem;
+	cursor: pointer;
+	transition: var(--transition);
+}
+
+.inputFieldContainer:focus-within .inputIconContainer {
+	background-color: var(--primaryColorBg);
+}
+
+.inputIcon {
+	width: 1.6rem;
+}
+
+.form input[type="email"] {
+	font-size: inherit;
+	outline: none;
+	border: none;
+	width: 100%;
+	padding: 0.7rem 0;
+}
+
+.form input[type="email"]:focus {
+	outline: none;
+	border: none;
+}
+
+.btn {
+	background-color: var(--primaryColorBg);
+	color: white;
+	border: none;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	transition: var(--transition);
+}
+
+.btn:hover {
+	background-color: var(--primaryColorBg2);
+}
