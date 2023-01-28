@@ -66,6 +66,10 @@
 	align-items: center;
 }
 
+.onboardingBottom span {
+	color: var(--primaryColorBg);
+}
+
 .onboardingBottom a:hover {
 	background-color: var(--darkBlue2);
 }
