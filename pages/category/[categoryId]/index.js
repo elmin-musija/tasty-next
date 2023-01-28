@@ -1,10 +1,19 @@
 import React from "react";
 import { getAllCategories, getAllMealsByCategory } from "../../../utils/fetch";
 import MealGallery from "../../../components/meal-gallery/meal-gallery";
+import { motion } from "framer-motion";
 
 export default function CategoryPage(props) {
 	const { categoryId, mealsByCategory } = props;
-	return <MealGallery category={categoryId} meals={mealsByCategory} />;
+	return (
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 0.5 }}
+		>
+			<MealGallery category={categoryId} meals={mealsByCategory} />
+		</motion.div>
+	);
 }
 
 export async function getStaticProps(context) {

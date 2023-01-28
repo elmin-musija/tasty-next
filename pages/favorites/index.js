@@ -5,6 +5,7 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { dbGetAllFavoritesByUser } from "../../src/db_access/favorites-DAO";
 import MealGalleryFavorites from "../../components/meal-gallery-favorites/meal-gallery-favorites";
+import { motion } from "framer-motion";
 
 const FavoritesPage = ({ allFavorites }) => {
 	const { data: session, status } = useSession();
@@ -14,7 +15,15 @@ const FavoritesPage = ({ allFavorites }) => {
 		router.replace("/auth/login");
 	}
 
-	return <MealGalleryFavorites category={"Favorites"} meals={allFavorites} />;
+	return (
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 0.5 }}
+		>
+			<MealGalleryFavorites category={"Favorites"} meals={allFavorites} />
+		</motion.div>
+	);
 };
 
 export default FavoritesPage;

@@ -1,8 +1,17 @@
 import { getAllMealsByArea, getAllAreas } from "../../../utils/fetch";
 import MealGallery from "../../../components/meal-gallery/meal-gallery";
+import { motion } from "framer-motion";
 
 export default function CategoryPage({ areaId, mealsByArea }) {
-	return <MealGallery category={areaId} meals={mealsByArea} />;
+	return (
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 0.5 }}
+		>
+			<MealGallery category={areaId} meals={mealsByArea} />
+		</motion.div>
+	);
 }
 
 export async function getStaticProps(context) {

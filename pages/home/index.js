@@ -7,6 +7,7 @@ import MealOfTheDay from "../../components/meal-of-the-day/meal-of-the-day";
 import PreviewAreas from "../../components/preview-areas/preview-areas";
 import PreviewCategories from "../../components/preview-categories/preview-categories";
 import NewsletterForm from "../../components/newsletter-form/newsletter-form";
+import { motion } from "framer-motion";
 
 export default function Home({
 	mealOfTheDay,
@@ -14,7 +15,11 @@ export default function Home({
 	previewCategories,
 }) {
 	return (
-		<div>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 0.5 }}
+		>
 			<NewsletterForm />
 			<section>
 				<MealOfTheDay randomMeal={mealOfTheDay} />
@@ -25,7 +30,7 @@ export default function Home({
 			<section>
 				<PreviewCategories previewCategories={previewCategories} />
 			</section>
-		</div>
+		</motion.div>
 	);
 }
 

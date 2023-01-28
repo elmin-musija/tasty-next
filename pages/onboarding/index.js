@@ -1,10 +1,16 @@
 import Link from "next/link";
 import React from "react";
 import styles from "./onboarding.module.css";
+import { motion } from "framer-motion";
 
 const OnboardingPage = () => {
 	return (
-		<div className={styles.onboarding}>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 0.5 }}
+			className={styles.onboarding}
+		>
 			<div className={styles.onboardingTop}>
 				<img src="/onboarding.svg" alt="Meals sketches" />
 			</div>
@@ -15,7 +21,7 @@ const OnboardingPage = () => {
 				</div>
 				<Link href="/home">Get Started</Link>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

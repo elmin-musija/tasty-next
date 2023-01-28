@@ -8,6 +8,7 @@ import Link from "next/link";
 import { uid } from "uid";
 import { dbGetAllFavoriteCategoriesByUser } from "../../src/db_access/favorites-DAO";
 import styles from "./profile.module.css";
+import { motion } from "framer-motion";
 
 const ProfilePage = ({ name, email, image, favoriteCategories }) => {
 	const { data: session, status } = useSession();
@@ -22,7 +23,12 @@ const ProfilePage = ({ name, email, image, favoriteCategories }) => {
 	}
 
 	return (
-		<div className={styles.profile}>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 0.5 }}
+			className={styles.profile}
+		>
 			<div>
 				{image && <Image src={image} width={150} height={150} alt={name} />}
 				<p key={uid()} className={styles.profileName}>
@@ -61,7 +67,7 @@ const ProfilePage = ({ name, email, image, favoriteCategories }) => {
 					<img src="/arrow-right-white.svg" alt="arrow" />
 				</button>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 
