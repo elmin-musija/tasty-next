@@ -18,8 +18,8 @@ const OnboardingPage = () => {
 			<div className={styles.onboardingBottom}>
 				<div>
 					<p>All recipe you needed</p>
-					<p>
-						5000+ tasty recipes made by people for your{" "}
+					<p className={styles.onboardingText}>
+						5000+{" "}
 						<span>
 							<Typewriter
 								words={[
@@ -36,8 +36,9 @@ const OnboardingPage = () => {
 								delaySpeed={2000}
 							/>
 						</span>{" "}
-						life
+						recipes
 					</p>
+					<p className={styles.onboardingText}>made by people for your life</p>
 				</div>
 				<Link href="/home">Get Started</Link>
 			</div>
