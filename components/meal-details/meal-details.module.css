@@ -8,6 +8,7 @@
 	padding: 3rem var(--phonePadding) 0;
 	background-color: white;
 	margin-top: -4rem;
+	padding-bottom: 3rem;
 	border-radius: 3rem 3rem 0 0;
 	box-shadow: 0 0 1.8rem var(--boxShadowDark);
 	position: relative;

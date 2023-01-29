@@ -1,3 +1,14 @@
-.clicked {
-	background-color: var(--primaryColorBg);
+.ingrItem {
+	width: fit-content;
+	padding: 0.8rem 1.2rem;
+	border-radius: 3rem;
+	margin-bottom: 1.5rem;
+	box-shadow: 0 0 1rem var(--boxShadow);
+	background-color: var(--lightGrayBg);
+	cursor: pointer;
+}
+
+.ingrItemActive {
+	background-image: linear-gradient(to right bottom, #99d899, #5bca80);
+	color: white;
 }

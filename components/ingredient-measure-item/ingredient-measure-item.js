@@ -12,10 +12,14 @@ const IngredientMeasureItem = ({ item }) => {
 
 	return (
 		<p
-			className={buttonClicked ? styles.clicked : null}
+			className={
+				buttonClicked
+					? `${styles.ingrItem} ${styles.ingrItemActive}`
+					: styles.ingrItem
+			}
 			onClick={onClickHandler}
 		>
-			{ingredient} - {measure}
+			{measure} {ingredient}
 		</p>
 	);
 };

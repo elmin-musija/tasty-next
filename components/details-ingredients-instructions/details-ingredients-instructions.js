@@ -13,6 +13,11 @@ export const DetailsIngredientsInstructions = ({ meal }) => {
 		setBtnInstructions((prevState) => !prevState);
 	};
 
+	let videoUrl = meal?.strYoutube;
+	const index = videoUrl.indexOf("?v=");
+	const videoId = videoUrl.slice(index + 3);
+	videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+
 	return (
 		<div key={uid()}>
 			<div className={styles.toggle} key={uid()}>
@@ -43,11 +48,17 @@ export const DetailsIngredientsInstructions = ({ meal }) => {
 
 			{btnInstructions && (
 				<div key={uid()}>
-					<p key={uid()}>{meal?.strInstructions}</p>
+					{meal?.strInstructions.split("\n").map((paragraph) => (
+						<p key={uid()} className={styles.instructionParagraph}>
+							{" "}
+							{paragraph}
+						</p>
+					))}
 					<p key={uid()}>{meal?.strTags}</p>
-					<a href={meal?.strYoutube} target="_blank">
-						Link to Youtube
-					</a>
+					<button className={styles.videoBtn}>Video</button>
+					{/* <a href={meal?.strYoutube} target="_blank">
+						Video
+					</a> */}
 				</div>
 			)}
 		</div>

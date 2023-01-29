@@ -8,6 +8,7 @@
 	background-color: #e6ebf2;
 	margin-bottom: 2rem;
 }
+
 .toggleBtn {
 	border: none;
 	background-color: var(--darkBlue);
@@ -18,7 +19,29 @@
 	font-size: inherit;
 	cursor: pointer;
 }
+
 .toggleBtnInactive {
 	background-color: var(--transparent);
 	color: var(--darkBlue);
+}
+
+.instructionParagraph {
+	margin-bottom: 1rem;
+}
+
+.videoBtn {
+	width: fit-content;
+	border: none;
+	background-color: var(--primaryColorBg);
+	color: white;
+	font-size: inherit;
+	padding: 1rem 2.5rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	margin-top: 1rem;
+	transition: var(--transition);
+}
+
+.videoBtn:hover {
+	background-color: var(--primaryColorBg2);
 }
