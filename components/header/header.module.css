@@ -3,7 +3,7 @@
 	justify-content: space-between;
 	align-items: center;
 	gap: 1rem;
-	margin: 1rem var(--phonePadding) 2rem;
+	padding: 1rem var(--phonePadding) 1rem;
 }
 
 .logo {

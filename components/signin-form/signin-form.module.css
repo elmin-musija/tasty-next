@@ -1,5 +1,6 @@
 .signinPage {
 	margin: 0 var(--phonePadding);
+	padding-top: 2rem;
 }
 
 .form {

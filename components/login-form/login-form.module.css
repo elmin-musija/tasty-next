@@ -1,5 +1,6 @@
 .loginPage {
 	margin: 0 var(--phonePadding);
+	padding-top: 2rem;
 }
 
 .header {

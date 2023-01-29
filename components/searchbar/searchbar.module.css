@@ -2,7 +2,7 @@
 	display: flex;
 	align-items: center;
 
-	margin: 0rem var(--phonePadding) 3.5rem;
+	margin: 1rem var(--phonePadding) 3.5rem;
 	overflow: hidden;
 
 	border: 1px solid var(--lightGrayBorder);
