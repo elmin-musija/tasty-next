@@ -37,7 +37,8 @@ function Header() {
 			</div>
 			{router.pathname !== "/auth/login" &&
 				router.pathname !== "/auth/signin" &&
-				router.pathname !== "/profile" && <Searchbar />}
+				router.pathname !== "/profile" &&
+				router.pathname !== "/details/[detailsId]" && <Searchbar />}
 		</>
 	);
 }
