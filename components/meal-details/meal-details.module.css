@@ -1,0 +1,67 @@
+.details img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.mealInfo {
+	padding: 3rem var(--phonePadding) 0;
+	background-color: white;
+	margin-top: -4rem;
+	border-radius: 3rem 3rem 0 0;
+	box-shadow: 0 0 1.8rem var(--boxShadowDark);
+	position: relative;
+	z-index: 1;
+}
+
+.mealHeader {
+	margin-bottom: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+}
+
+.mealHeader > div {
+	width: 30%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.category {
+	font-weight: 700;
+	font-size: 1.8rem;
+	color: var(--darkGrayText);
+}
+
+.area {
+	font-size: 1.8rem;
+	color: var(--darkGrayText);
+	margin-bottom: 0.8rem;
+}
+
+.toggle {
+	display: flex;
+	gap: 0.5rem;
+	width: fit-content;
+	margin: 0 auto;
+	padding: 0.5rem;
+	border-radius: 1rem;
+	background-color: #e6ebf2;
+	margin-bottom: 2rem;
+}
+
+.toggleBtn {
+	border: none;
+	background-color: var(--darkBlue);
+	color: white;
+	padding: 1rem 2.5rem;
+	border-radius: 0.5rem;
+	font-weight: 600;
+	font-size: inherit;
+	cursor: pointer;
+}
+
+.toggleBtnInactive {
+	background-color: var(--transparent);
+	color: var(--darkBlue);
+}

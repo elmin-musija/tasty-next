@@ -52,11 +52,12 @@ const FavoritesButton = ({ meal }) => {
 	}, []);
 
 	return (
-		<button
-			className={button ? styles.checked : ""}
-			onClick={() => onClickHandler(meal)}
-		>
-			Add to Favorites
+		<button className={styles.btn} onClick={() => onClickHandler(meal)}>
+			{button ? (
+				<img src="/heart-colored.svg" alt="Heart" />
+			) : (
+				<img src="/heart.svg" alt="Heart" />
+			)}
 		</button>
 	);
 };

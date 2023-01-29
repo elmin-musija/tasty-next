@@ -3,6 +3,7 @@
 	bottom: 0;
 	left: 0;
 	width: 100%;
+	z-index: 999;
 
 	display: flex;
 	justify-content: center;
@@ -11,5 +12,5 @@
 	padding: 2rem;
 	border-radius: 2rem 2rem 0 0;
 	background-color: white;
-	box-shadow: 0 0 12px var(--boxShadow);
+	box-shadow: 0 0 1.2rem var(--boxShadow);
 }
