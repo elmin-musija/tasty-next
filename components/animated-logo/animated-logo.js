@@ -19,8 +19,8 @@ function AnimatedLogo() {
 			<motion.path
 				d="M85.3 15.1985C82.7688 14.7739 80.84 12.5724 80.84 9.92045C80.84 6.96457 83.2362 4.56836 86.1921 4.56836C86.5593 4.56836 86.918 4.60535 87.2644 4.67582"
 				stroke="white"
-				stroke-width="2"
-				stroke-linecap="round"
+				strokeWidth="2"
+				strokeLinecap="round"
 				initial={{ opacity: 0, pathLength: 0 }}
 				animate={{ opacity: 1, pathLength: 1 }}
 				transition={{
@@ -31,8 +31,8 @@ function AnimatedLogo() {
 			<motion.path
 				d="M99.7527 15.1985C102.284 14.7739 104.213 12.5724 104.213 9.92045C104.213 6.96457 101.817 4.56836 98.8607 4.56836C98.4934 4.56836 98.1348 4.60535 97.7883 4.67582"
 				stroke="white"
-				stroke-width="2"
-				stroke-linecap="round"
+				strokeWidth="2"
+				strokeLinecap="round"
 				initial={{ opacity: 0, pathLength: 0 }}
 				animate={{ opacity: 1, pathLength: 1 }}
 				transition={{
@@ -43,8 +43,8 @@ function AnimatedLogo() {
 			<motion.path
 				d="M87.2527 7.69012C87.1426 7.26246 87.0841 6.81411 87.0841 6.35209C87.0841 3.39621 89.4803 1 92.4362 1C95.3921 1 97.7883 3.39621 97.7883 6.35209C97.7883 6.81411 97.7298 7.26246 97.6197 7.69012"
 				stroke="white"
-				stroke-width="2"
-				stroke-linecap="round"
+				strokeWidth="2"
+				strokeLinecap="round"
 				initial={{ opacity: 0, pathLength: 0 }}
 				animate={{ opacity: 1, pathLength: 1 }}
 				transition={{
@@ -55,8 +55,8 @@ function AnimatedLogo() {
 			<motion.path
 				d="M92.4011 10.6719V13.4748"
 				stroke="white"
-				stroke-width="2"
-				stroke-linecap="round"
+				strokeWidth="2"
+				strokeLinecap="round"
 				initial={{ opacity: 0, pathLength: 0 }}
 				animate={{ opacity: 1, pathLength: 1 }}
 				transition={{
@@ -67,8 +67,8 @@ function AnimatedLogo() {
 			<motion.path
 				d="M87.4444 10.9072C87.2203 11.4077 87.6311 13.3158 88.1166 13.6286"
 				stroke="white"
-				stroke-width="2"
-				stroke-linecap="round"
+				strokeWidth="2"
+				strokeLinecap="round"
 				initial={{ opacity: 0, pathLength: 0 }}
 				animate={{ opacity: 1, pathLength: 1 }}
 				transition={{
@@ -79,8 +79,8 @@ function AnimatedLogo() {
 			<motion.path
 				d="M97.7255 10.9072C97.9496 11.4077 97.5388 13.3158 97.0533 13.6286"
 				stroke="white"
-				stroke-width="2"
-				stroke-linecap="round"
+				strokeWidth="2"
+				strokeLinecap="round"
 				initial={{ opacity: 0, pathLength: 0 }}
 				animate={{ opacity: 1, pathLength: 1 }}
 				transition={{
