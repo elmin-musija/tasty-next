@@ -1,0 +1,23 @@
+.mealHeader {
+	margin-bottom: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+}
+
+.mealHeader > div {
+	width: 30%;
+	display: flex;
+	justify-content: space-between;
+}
+.category {
+	font-weight: 700;
+	font-size: 1.8rem;
+	color: var(--darkGrayText);
+}
+
+.area {
+	font-size: 1.8rem;
+	color: var(--darkGrayText);
+	margin-bottom: 0.8rem;
+}
