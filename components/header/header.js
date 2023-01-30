@@ -18,9 +18,9 @@ function Header() {
 	return (
 		<>
 			<div className={styles.header}>
-				<div>
+				<Link href="/home">
 					<img src="/logo-blue.svg" alt="Logo" className={styles.logo} />
-				</div>
+				</Link>
 				<div className={styles.user}>
 					{session &&
 						status === "authenticated" &&
