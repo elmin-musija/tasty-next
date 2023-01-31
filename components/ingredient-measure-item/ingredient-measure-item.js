@@ -11,7 +11,7 @@ const IngredientMeasureItem = ({ item }) => {
 	const { ingredient, measure } = item;
 
 	return (
-		<p
+		<div
 			className={
 				buttonClicked
 					? `${styles.ingrItem} ${styles.ingrItemActive}`
@@ -20,7 +20,7 @@ const IngredientMeasureItem = ({ item }) => {
 			onClick={onClickHandler}
 		>
 			{measure} {ingredient}
-		</p>
+		</div>
 	);
 };
 

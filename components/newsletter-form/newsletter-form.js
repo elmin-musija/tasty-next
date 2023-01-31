@@ -23,7 +23,7 @@ const NewsletterForm = () => {
 	};
 
 	return (
-		<section className={styles.newsletter}>
+		<div className={styles.newsletter}>
 			<h2>Newsletter</h2>
 			<p>
 				Subscribe to the Tasty newsletter and we keep you updated with brand new
@@ -49,7 +49,7 @@ const NewsletterForm = () => {
 				</div>
 				<input type="submit" value="Subscribe" className={styles.btn} />
 			</form>
-		</section>
+		</div>
 	);
 };
 

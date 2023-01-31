@@ -18,6 +18,7 @@ function Header() {
 	return (
 		<>
 			<div className={styles.header}>
+				<h1 className={styles.heading1}>Tasty</h1>
 				<div>
 					<img src="/logo-blue.svg" alt="Logo" className={styles.logo} />
 				</div>

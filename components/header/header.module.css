@@ -6,6 +6,10 @@
 	padding: 1rem var(--phonePadding) 1rem;
 }
 
+.heading1 {
+	display: none;
+}
+
 .logo {
 	height: 3rem;
 	width: auto;
