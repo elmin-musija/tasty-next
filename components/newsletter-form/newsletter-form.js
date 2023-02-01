@@ -1,9 +1,11 @@
 import React from "react";
-import { useRef } from "react";
+import { useRef, useContext } from "react";
+import NotificationContext from "../../context/context";
 import styles from "./newsletter-form.module.css";
 
 const NewsletterForm = () => {
 	const inputEmailNewsletterRef = useRef();
+	const { displayNotification } = useContext(NotificationContext);
 
 	const onSubmitNewsletterHandler = async (event) => {
 		event.preventDefault();
@@ -16,6 +18,17 @@ const NewsletterForm = () => {
 		/**
 		 * TODO: handle response...
 		 */
+		if (res.success) {
+			displayNotification({
+				type: "success",
+				message: "Successfully registrated for newsletter",
+			});
+		} else if (res.error) {
+			displayNotification({
+				type: "error",
+				message: "Could not registrate for newsletter",
+			});
+		}
 	};
 
 	const focusHandlerEmail = () => {

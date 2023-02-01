@@ -1,18 +1,18 @@
 import { google } from "googleapis";
 import nodemailer from "nodemailer";
 
-const GMAIL_ADRESS = process.env.GMAIL_ADRESS;
-const CLIENT_ID = process.env.GMAIL_CLIENT_ID;
-const CLIENT_SECRET = process.env.GMAIL_CLIENT_SECRET;
-const REDIRECT_URI = process.env.GMAIL_REDIRECT_URI;
-const REFRESH_TOKEN = process.env.GMAIL_REFRESH_TOKEN;
+const GOOGLE_ADRESS = process.env.GOOGLE_ADRESS;
+const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
+const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
+const GOOGLE_REDIRECT_URI = process.env.GOOGLE_REDIRECT_URI;
+const GOOGLE_REFRESH_TOKEN = process.env.GOOGLE_REFRESH_TOKEN;
 
 const oAuth2Client = new google.auth.OAuth2(
-	CLIENT_ID,
-	CLIENT_SECRET,
-	REDIRECT_URI
+	GOOGLE_CLIENT_ID,
+	GOOGLE_CLIENT_SECRET,
+	GOOGLE_REDIRECT_URI
 );
-oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
+oAuth2Client.setCredentials({ refresh_token: GOOGLE_REFRESH_TOKEN });
 
 const sendMail = ({ to, subject, message, html }) => {
 	return oAuth2Client
@@ -22,16 +22,15 @@ const sendMail = ({ to, subject, message, html }) => {
 				service: "gmail",
 				auth: {
 					type: "OAuth2",
-					user: GMAIL_ADRESS,
-					clientId: CLIENT_ID,
-					clientSecret: CLIENT_SECRET,
-					refreshToken: REFRESH_TOKEN,
+					user: GOOGLE_ADRESS,
+					clientId: GOOGLE_CLIENT_ID,
+					clientSecret: GOOGLE_CLIENT_SECRET,
+					refreshToken: GOOGLE_REFRESH_TOKEN,
 					accessToken: accessToken,
 				},
 			});
-
 			return transporter.sendMail({
-				from: `The Tasty Club <${GMAIL_ADRESS}>`,
+				from: `The Tasty Club <${GOOGLE_ADRESS}>`,
 				to,
 				subject,
 				message,
