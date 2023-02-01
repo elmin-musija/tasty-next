@@ -13,7 +13,7 @@ const Notification = (props) => {
 
 	let notificationClass = "";
 
-	const onCloseButtonClickHandler = () => {
+	const onClickHandler = () => {
 		hideNotification();
 	};
 
@@ -30,14 +30,8 @@ const Notification = (props) => {
 	}
 
 	return (
-		<div className={notificationClass}>
-			<p onClick={onCloseButtonClickHandler}>{getMessage()}</p>
-			<button
-				onClick={onCloseButtonClickHandler}
-				className={styles.cancelNotificationBtn}
-			>
-				X
-			</button>
+		<div className={notificationClass} onClick={onClickHandler}>
+			<p>{getMessage()}</p>
 		</div>
 	);
 };
