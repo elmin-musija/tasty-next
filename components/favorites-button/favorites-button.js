@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
+import { useContext } from "react";
+import NotificationContext from "../../context/context";
+
 import styles from "./favorites-button.module.css";
 
 const FavoritesButton = ({ meal }) => {
 	const { data: session, status } = useSession();
 	const [button, setButton] = useState(false);
+	const { displayNotification } = useContext(NotificationContext);
 
 	const onClickHandler = (paramMeal) => {
 		// optimistic....
@@ -27,8 +31,16 @@ const FavoritesButton = ({ meal }) => {
 			.then((res) => res.json())
 			.then((result) => {
 				if (result.inserted) {
+					displayNotification({
+						type: "success",
+						message: "Meal successfully added to favorites",
+					});
 					setButton(true);
 				} else if (result.deleted) {
+					displayNotification({
+						type: "success",
+						message: "Meal successfully removed from favorites",
+					});
 					setButton(false);
 				}
 			});

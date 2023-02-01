@@ -1,41 +1,56 @@
-import { createContext, useState } from "react";
+import React from "react";
+import { createContext, useState, useEffect } from "react";
 
-const AppContext = createContext();
+const NotificationContext = createContext();
 
-export function AppContextProvider(props) {
-	const [favorites, setFavorites] = useState([]);
+export const NotificationContextProvider = ({ children }) => {
+	const [showNotification, setShowNotification] = useState(false);
+	const [type, setType] = useState();
+	const [message, setMessage] = useState();
 
-	const checkIfMealExists = (paramMeal) => {
-		for (const meals of favorites) {
-			if (meals.idMeal === paramMeal.idMeal) {
-				return true;
-			}
-		}
-		return false;
+	useEffect(() => {
+		const timeout = setTimeout(() => {
+			setShowNotification(false);
+		}, 2000);
+		return () => {
+			clearTimeout(timeout);
+		};
+	});
+
+	const getShowNotification = () => {
+		return showNotification;
+	};
+	const getNotificationType = () => {
+		return type;
+	};
+	const getMessage = () => {
+		return message;
 	};
 
-	const removeFromFavorites = (paramMeal) => {
-		const newFavorites = favorites.filter(
-			(element) => element.idMeal !== paramMeal.idMeal
-		);
-		setFavorites(newFavorites);
+	const displayNotification = ({ type, message }) => {
+		setType(type);
+		setMessage(message);
+		setShowNotification(true);
 	};
-
-	const addToFavorites = (paramMeal) => {
-		if (!checkIfMealExists(paramMeal)) {
-			setFavorites((prevState) => [...prevState, paramMeal]);
-		} else {
-			removeFromFavorites(paramMeal);
-		}
+	const hideNotification = () => {
+		setType(null);
+		setMessage(null);
+		setShowNotification(false);
 	};
 
 	return (
-		<AppContext.Provider
-			value={{ favorites, addToFavorites, checkIfMealExists }}
+		<NotificationContext.Provider
+			value={{
+				displayNotification,
+				hideNotification,
+				getShowNotification,
+				getNotificationType,
+				getMessage,
+			}}
 		>
-			{props.children}
-		</AppContext.Provider>
+			{children}
+		</NotificationContext.Provider>
 	);
-}
+};
 
-export default AppContext;
+export default NotificationContext;
