@@ -22,19 +22,22 @@ const Notification = (props) => {
 	}
 
 	if (getNotificationType() === "success") {
-		notificationClass = styles.success;
+		notificationClass = `${styles.notification} ${styles.success}`;
 	} else if (getNotificationType() === "warning") {
-		notificationClass = styles.warning;
+		notificationClass = `${styles.notification} ${styles.warning}`;
 	} else {
-		notificationClass = styles.error;
+		notificationClass = `${styles.notification} ${styles.error}`;
 	}
 
 	return (
-		<div>
-			<p onClick={onCloseButtonClickHandler} className={notificationClass}>
-				{getMessage()}
-			</p>
-			<button onClick={onCloseButtonClickHandler}>X</button>
+		<div className={notificationClass}>
+			<p onClick={onCloseButtonClickHandler}>{getMessage()}</p>
+			<button
+				onClick={onCloseButtonClickHandler}
+				className={styles.cancelNotificationBtn}
+			>
+				X
+			</button>
 		</div>
 	);
 };
