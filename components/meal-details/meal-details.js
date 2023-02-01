@@ -4,10 +4,18 @@ import { uid } from "uid";
 import { DetailsIngredientsInstructions } from "../details-ingredients-instructions/details-ingredients-instructions";
 import DetailsHeader from "../details-header/details-header";
 import styles from "./meal-details.module.css";
+import { motion } from "framer-motion";
 
 const MealDetails = ({ meal }) => {
 	return (
-		<div key={uid()} className={styles.details}>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+			transition={{ duration: 0.5 }}
+			key={uid()}
+			className={styles.details}
+		>
 			<Image
 				src={meal.strMealThumb}
 				alt={meal.strMeal}
@@ -19,7 +27,7 @@ const MealDetails = ({ meal }) => {
 				<DetailsHeader meal={meal} />
 				<DetailsIngredientsInstructions meal={meal} />
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 
