@@ -17,31 +17,29 @@ function Header() {
 
 	return (
 		<>
+			<h1 className={styles.heading1}>Tasty</h1>
 			<div className={styles.header}>
-				<h1 className={styles.heading1}>Tasty</h1>
-				<div>
-					<Link href="/home">
-						<img src="/logo-blue.svg" alt="Logo" className={styles.logo} />
-					</Link>
-					<div className={styles.user}>
-						{session &&
-							status === "authenticated" &&
-							router.pathname !== "/profile" && (
-								<Link href="/profile">
-									{session.user.name || session.user.email}
-								</Link>
-							)}
-						{router.pathname !== "/auth/login" &&
-							router.pathname !== "/auth/signin" &&
-							status !== "authenticated" && <LoginButton />}
-						{status === "authenticated" && <LogoutButton />}
-					</div>
+				<Link href="/home">
+					<img src="/logo-blue.svg" alt="Logo" className={styles.logo} />
+				</Link>
+				<div className={styles.user}>
+					{session &&
+						status === "authenticated" &&
+						router.pathname !== "/profile" && (
+							<Link href="/profile">
+								{session.user.name || session.user.email}
+							</Link>
+						)}
+					{router.pathname !== "/auth/login" &&
+						router.pathname !== "/auth/signin" &&
+						status !== "authenticated" && <LoginButton />}
+					{status === "authenticated" && <LogoutButton />}
 				</div>
-				{router.pathname !== "/auth/login" &&
-					router.pathname !== "/auth/signin" &&
-					router.pathname !== "/profile" &&
-					router.pathname !== "/details/[detailsId]" && <Searchbar />}
 			</div>
+			{router.pathname !== "/auth/login" &&
+				router.pathname !== "/auth/signin" &&
+				router.pathname !== "/profile" &&
+				router.pathname !== "/details/[detailsId]" && <Searchbar />}
 		</>
 	);
 }
