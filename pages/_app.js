@@ -17,6 +17,7 @@ export default function App({
 			<NotificationContextProvider>
 				<div className={styles.app}>
 					<div className={styles.phone}>
+						<Notification />
 						<div className={styles.content}>
 							<Head>
 								<title>Tasty App</title>
@@ -33,7 +34,6 @@ export default function App({
 							<main>
 								<div className={styles.page}>
 									<Component {...pageProps} />
-									<Notification />
 								</div>
 							</main>
 						</div>
