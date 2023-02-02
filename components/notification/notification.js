@@ -37,7 +37,7 @@ const Notification = (props) => {
 					className={notificationClass}
 					onClick={onClickHandler}
 				>
-					<p>{getMessage()}</p>
+					<p className={styles.notificationText}>{getMessage()}</p>
 				</motion.div>
 			)}
 		</AnimatePresence>

@@ -14,33 +14,22 @@
 }
 
 .success {
-	background-color: rgba(2, 255, 78, 0.5);
+	background-color: rgba(1, 165, 177, 0.6);
 }
 
 .warning {
-	color: rgba(255, 166, 0, 0.5);
+	background-color: rgba(255, 166, 0, 0.6);
 }
 
 .error {
-	color: rgba(255, 0, 0, 0.5);
+	background-color: rgba(255, 0, 0, 0.6);
 }
 
-.cancelNotificationBtn {
-	background-color: white;
-	padding: 0.2rem;
+.success .notificationText,
+.error .notificationText {
+	color: white;
+}
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 2rem;
-	height: 2rem;
-
-	border: 1px solid var(--darkBlue);
-	border-radius: 3rem;
-	cursor: pointer;
-
-	position: absolute;
-	top: 0;
-	right: 0;
-	margin: 1rem;
+.warning .notificationText {
+	color: var(--darkBlue);
 }
