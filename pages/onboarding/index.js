@@ -41,7 +41,7 @@ const OnboardingPage = () => {
 					</p>
 					<p className={styles.onboardingText}>made by people for your life</p>
 				</div>
-				<Link href="/home">Get Started</Link>
+				<Link href="/privacy-policy">Get Started</Link>
 			</div>
 		</motion.div>
 	);

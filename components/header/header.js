@@ -11,7 +11,11 @@ function Header() {
 	const { data: session, status } = useSession();
 	const router = useRouter();
 
-	if (router.pathname === "/" || router.pathname === "/onboarding") {
+	if (
+		router.pathname === "/" ||
+		router.pathname === "/privacy-policy" ||
+		router.pathname === "/onboarding"
+	) {
 		return;
 	}
 

@@ -1,0 +1,78 @@
+.privatePolicy h2 {
+	font-size: 2.6rem;
+	margin-bottom: 1.2rem;
+}
+
+.privatePolicy h3 {
+	font-size: 1.8rem;
+	margin-bottom: 1.2rem;
+}
+
+.privatePolicy {
+	padding: 2rem var(--phonePadding) 0;
+}
+
+.privatePolicy > div {
+	margin-bottom: 3rem;
+}
+
+.privatePolicy p {
+	margin-bottom: 1.2rem;
+}
+
+.privatePolicy span {
+	font-weight: 600;
+}
+
+.privatePolicy a {
+	color: var(--primaryColorLinkText);
+}
+
+.privatePolicy ul {
+	margin-left: 2.5rem;
+	margin-bottom: 1.2rem;
+}
+
+.privatePolicy ul li {
+	margin-bottom: 0.6rem;
+}
+
+.form {
+	margin-bottom: 1.4rem;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.form label {
+	cursor: pointer;
+}
+
+.form input {
+	width: 2rem;
+	height: 2rem;
+}
+
+.btn {
+	font-size: 2rem;
+	font-weight: bold;
+	color: white;
+	background-color: var(--darkBlue);
+	width: 100%;
+	height: 5.5rem;
+	border-radius: 2rem;
+	padding-bottom: 0.6rem;
+	transition: var(--transition);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btnActive:hover {
+	background-color: var(--darkBlue2);
+}
+
+.btnDisabled:hover {
+	cursor: not-allowed;
+}
