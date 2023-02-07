@@ -21,12 +21,17 @@ const NewsletterForm = () => {
 		if (res.success) {
 			displayNotification({
 				type: "success",
-				message: "Successfully registrated for newsletter",
+				message: res.success,
+			});
+		} else if (res.warning) {
+			displayNotification({
+				type: "warning",
+				message: res.warning,
 			});
 		} else if (res.error) {
 			displayNotification({
 				type: "error",
-				message: "Could not registrate for newsletter",
+				message: res.error,
 			});
 		}
 	};
