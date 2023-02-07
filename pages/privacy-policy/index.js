@@ -239,18 +239,16 @@ const PrivacyPolicy = () => {
 			</form>
 
 			{checked && (
-				<Link href="/home" className={`${styles.btn} ${styles.btnActive}`}>
+				<a href="/home" className={`${styles.btn} ${styles.btnActive}`}>
 					Continue
-				</Link>
+				</a>
 			)}
 
 			{!checked && (
-				<Link href="" className={`${styles.btn} ${styles.btnDisabled}`}>
+				<a href="" className={`${styles.btn} ${styles.btnDisabled}`}>
 					Please accept privacy policy
-				</Link>
+				</a>
 			)}
-
-			{/* <AcceptBtn /> */}
 		</motion.div>
 	);
 };
