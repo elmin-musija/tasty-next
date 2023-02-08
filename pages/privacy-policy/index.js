@@ -234,7 +234,7 @@ const PrivacyPolicy = () => {
 					id="checkBox"
 				/>
 				<label htmlFor="checkBox">
-					I have read the privacy policy and accept it.
+					I have read the privacy policy and agree.
 				</label>
 			</form>
 
@@ -245,9 +245,9 @@ const PrivacyPolicy = () => {
 			)}
 
 			{!checked && (
-				<a href="" className={`${styles.btn} ${styles.btnDisabled}`}>
+				<button className={`${styles.btn} ${styles.btnDisabled}`}>
 					Please accept privacy policy
-				</a>
+				</button>
 			)}
 		</motion.div>
 	);
