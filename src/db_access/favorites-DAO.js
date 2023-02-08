@@ -22,6 +22,7 @@ const dbGetAllFavoritesByUser = async (paramUserEmail) => {
 	const resultFormat = result.map((element) => ({
 		...element,
 		_id: ObjectId(element._id).toString(),
+		createdAt: element.createdAt.toString(),
 	}));
 	return resultFormat;
 };
@@ -75,9 +76,15 @@ const dbInsertSingleFavorite = async ({
 	user,
 }) => {
 	const connection = await dbConnect();
-	const result = await connection
-		.collection(COLLECTION_NAME)
-		.insertOne({ idMeal, strMeal, strArea, strCategory, strMealThumb, user });
+	const result = await connection.collection(COLLECTION_NAME).insertOne({
+		idMeal,
+		strMeal,
+		strArea,
+		strCategory,
+		strMealThumb,
+		user,
+		createdAt: new Date(),
+	});
 
 	return result;
 };

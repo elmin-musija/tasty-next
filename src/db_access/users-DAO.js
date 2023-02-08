@@ -10,7 +10,7 @@ const dbInsertSingleUser = async ({ firstname, lastname, email, password }) => {
 		email,
 		password,
 		role: "user",
-		createdAt: new Date().getTime(),
+		createdAt: new Date(),
 		verified: false,
 	});
 	return result;
